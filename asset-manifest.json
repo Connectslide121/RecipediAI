@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/RecipediAI/static/css/main.8a5077a9.css",
-    "main.js": "/RecipediAI/static/js/main.1f621dd5.js",
+    "main.js": "/RecipediAI/static/js/main.caebbc52.js",
     "static/media/logo.jpg": "/RecipediAI/static/media/logo.c6d2c7d10bfe0b3f5970.jpg",
     "index.html": "/RecipediAI/index.html",
     "main.8a5077a9.css.map": "/RecipediAI/static/css/main.8a5077a9.css.map",
-    "main.1f621dd5.js.map": "/RecipediAI/static/js/main.1f621dd5.js.map"
+    "main.caebbc52.js.map": "/RecipediAI/static/js/main.caebbc52.js.map"
   },
   "entrypoints": [
     "static/css/main.8a5077a9.css",
-    "static/js/main.1f621dd5.js"
+    "static/js/main.caebbc52.js"
   ]
 }
