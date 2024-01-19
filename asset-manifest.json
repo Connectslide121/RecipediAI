@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/daietpedia/static/css/main.9a4d20ec.css",
-    "main.js": "/daietpedia/static/js/main.ed6a5a80.js",
+    "main.js": "/daietpedia/static/js/main.5ad415c1.js",
     "static/media/logo.png": "/daietpedia/static/media/logo.4e11450170966600a919.png",
     "static/media/title.png": "/daietpedia/static/media/title.018dd9135bdcf37ec497.png",
     "index.html": "/daietpedia/index.html",
     "main.9a4d20ec.css.map": "/daietpedia/static/css/main.9a4d20ec.css.map",
-    "main.ed6a5a80.js.map": "/daietpedia/static/js/main.ed6a5a80.js.map"
+    "main.5ad415c1.js.map": "/daietpedia/static/js/main.5ad415c1.js.map"
   },
   "entrypoints": [
     "static/css/main.9a4d20ec.css",
-    "static/js/main.ed6a5a80.js"
+    "static/js/main.5ad415c1.js"
   ]
 }
