@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/RecipediAI/static/css/main.5901f15a.css",
-    "main.js": "/RecipediAI/static/js/main.3e03e80b.js",
-    "static/media/logo.png": "/RecipediAI/static/media/logo.686e34e8421b13176600.png",
-    "index.html": "/RecipediAI/index.html",
-    "main.5901f15a.css.map": "/RecipediAI/static/css/main.5901f15a.css.map",
-    "main.3e03e80b.js.map": "/RecipediAI/static/js/main.3e03e80b.js.map"
+    "main.css": "/daietpedia/static/css/main.9a4d20ec.css",
+    "main.js": "/daietpedia/static/js/main.ed6a5a80.js",
+    "static/media/logo.png": "/daietpedia/static/media/logo.4e11450170966600a919.png",
+    "static/media/title.png": "/daietpedia/static/media/title.018dd9135bdcf37ec497.png",
+    "index.html": "/daietpedia/index.html",
+    "main.9a4d20ec.css.map": "/daietpedia/static/css/main.9a4d20ec.css.map",
+    "main.ed6a5a80.js.map": "/daietpedia/static/js/main.ed6a5a80.js.map"
   },
   "entrypoints": [
-    "static/css/main.5901f15a.css",
-    "static/js/main.3e03e80b.js"
+    "static/css/main.9a4d20ec.css",
+    "static/js/main.ed6a5a80.js"
   ]
 }
