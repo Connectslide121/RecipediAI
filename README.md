@@ -1,6 +1,6 @@
 ![alt text](https://github.com/Connectslide121/RecipediAI/blob/master/Connect_banner_github.png)
 
-# RecipediAI
+# dAIetPedia
 
 A recipe website. Search for recipes by ingredient, cuisine etc... or tell an AI whatever you think is relevant and they will suggest a whole menu! 
 
