@@ -4,12 +4,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./styles.css";
 import Root from "./pages/Root";
 import Start from "./pages/Start";
-import Home from "./pages/Home";
 import ErrorPage from "./error-page";
+import Sidebar from "./pages/Sidebar";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
@@ -19,9 +18,15 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: "daietpedia/home",
-        element: <Home />,
-        errorElement: <ErrorPage />
+        element: <Sidebar />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            path: "daietpedia/home",
+            element: "",
+            errorElement: <ErrorPage />
+          }
+        ]
       }
     ]
   }

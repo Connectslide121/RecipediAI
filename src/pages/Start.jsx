@@ -18,11 +18,11 @@ import food12 from "../images/food12.jpg";
 export default function Start() {
   return (
     <>
-      <section className="home-container">
-        <div className="home-left">
+      <section className="start-container">
+        <div className="start-left">
           <header>
-            <img className="home-logo" src={logo} alt="" />
-            <img className="home-title" src={title} alt="" />{" "}
+            <img className="start-logo" src={logo} alt="" />
+            <img className="start-title" src={title} alt="" />{" "}
           </header>
           <div>
             <p>
@@ -35,17 +35,27 @@ export default function Start() {
               Simply let our AI know your preferences, and unlock a world of
               personalized recipes designed just for you.
             </p>
-            <Link to="./home">Get started</Link>
+            <Link to="./home" className="start-button">
+              Get started
+            </Link>
+            <h5>
+              Recipes by{" "}
+              <span>
+                <a href="https://www.edamam.com/" target="blank">
+                  Edamam API
+                </a>
+              </span>
+            </h5>
           </div>
         </div>
-        <div className="home-right">
+        <div className="start-right">
           <div className="top">
             <img src={food1} alt="food" />
             <img src={food2} alt="food" />
             <img src={food3} alt="food" />
             <img src={food4} alt="food" />
-            <img src={food5} alt="food" />
             <img src={food6} alt="food" />
+            <img src={food5} alt="food" />
           </div>
           <div className="bottom">
             <img src={food7} alt="food" />
