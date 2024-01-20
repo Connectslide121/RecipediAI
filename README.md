@@ -11,6 +11,8 @@ Simply let our AI know your preferences, and unlock a world of personalized reci
 
 An OpenAI API key is required for AI functionality.
 
-The app uses [Edamam API](https://www.edamam.com/) to get the recipes. 
-
 Visit [here](https://connectslide121.github.io/daietpedia/)
+
+Recipies by [Edamam API](https://www.edamam.com/). 
+
+
