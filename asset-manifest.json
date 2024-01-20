@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/daietpedia/static/css/main.7d36f5e3.css",
-    "main.js": "/daietpedia/static/js/main.7e6eaf28.js",
+    "main.css": "/daietpedia/static/css/main.8a6ae437.css",
+    "main.js": "/daietpedia/static/js/main.80f5054b.js",
+    "static/media/food5.jpeg": "/daietpedia/static/media/food5.2a84400628024ccb2302.jpeg",
+    "static/media/food2.jpg": "/daietpedia/static/media/food2.0b70a050f9dd26132cce.jpg",
+    "static/media/food9.jpg": "/daietpedia/static/media/food9.666efffa1d28c6b35929.jpg",
+    "static/media/food6.webp": "/daietpedia/static/media/food6.dd421642b658cec3041d.webp",
+    "static/media/food1.jpg": "/daietpedia/static/media/food1.92d01b795285ae5cc6e7.jpg",
+    "static/media/food10.webp": "/daietpedia/static/media/food10.b6ae773c0bb5ce91bf0c.webp",
+    "static/media/food11.webp": "/daietpedia/static/media/food11.7ce08a8130d86a18f377.webp",
+    "static/media/food3.jpg": "/daietpedia/static/media/food3.f8d998ab6414d1316896.jpg",
+    "static/media/food7.jpg": "/daietpedia/static/media/food7.b80ea4f48952da5948f0.jpg",
+    "static/media/food4.jpg": "/daietpedia/static/media/food4.3db179a3a4bdb77a7140.jpg",
     "static/media/logo.png": "/daietpedia/static/media/logo.4e11450170966600a919.png",
+    "static/media/food8.webp": "/daietpedia/static/media/food8.66c07bbb468cb7941876.webp",
     "static/media/title.png": "/daietpedia/static/media/title.018dd9135bdcf37ec497.png",
+    "static/media/food12.jpg": "/daietpedia/static/media/food12.aee8e2dab6b3ab024cc1.jpg",
     "index.html": "/daietpedia/index.html",
-    "main.7d36f5e3.css.map": "/daietpedia/static/css/main.7d36f5e3.css.map",
-    "main.7e6eaf28.js.map": "/daietpedia/static/js/main.7e6eaf28.js.map"
+    "main.8a6ae437.css.map": "/daietpedia/static/css/main.8a6ae437.css.map",
+    "main.80f5054b.js.map": "/daietpedia/static/js/main.80f5054b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d36f5e3.css",
-    "static/js/main.7e6eaf28.js"
+    "static/css/main.8a6ae437.css",
+    "static/js/main.80f5054b.js"
   ]
 }
