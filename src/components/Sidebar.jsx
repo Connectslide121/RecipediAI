@@ -7,7 +7,8 @@ import {
   faUtensils,
   faEarthAmericas,
   faStar,
-  faAsterisk
+  faAsterisk,
+  faMagnifyingGlass
 } from "@fortawesome/free-solid-svg-icons";
 export default function Sidebar() {
   return (
@@ -15,7 +16,7 @@ export default function Sidebar() {
       <div className="main-content-container">
         <div className="sidebar">
           <Form>
-            <input type="text" placeholder="Search recipes" />
+            <input type="text" placeholder="Quick search" />
           </Form>
           <ul>
             <li>
@@ -32,6 +33,14 @@ export default function Sidebar() {
                   <FontAwesomeIcon icon={faEarthAmericas} />
                 </span>
                 <p>Explore</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="daietpedia/assistant">
+                <span>
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />{" "}
+                </span>
+                <p>Search</p>
               </NavLink>
             </li>
             <li>

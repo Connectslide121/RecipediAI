@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClock,
   faKitchenSet,
-  faFlag
+  faFlag,
+  faUsers
 } from "@fortawesome/free-solid-svg-icons";
 import "../recipeCardStyles.css";
 
@@ -25,9 +26,15 @@ export default function RecipeCard(props) {
                 )
                 .join(", ")}
             </p>
+            {props.Recipe.totalTime !== 0 && (
+              <p>
+                <FontAwesomeIcon className="recipe-card-icon" icon={faClock} />
+                {props.Recipe.totalTime} mins
+              </p>
+            )}
             <p>
-              <FontAwesomeIcon className="recipe-card-icon" icon={faClock} />
-              {props.Recipe.totalTime} mins
+              <FontAwesomeIcon className="recipe-card-icon" icon={faUsers} />
+              {props.Recipe.yield}
             </p>
             <a href={props.Recipe.url} target="_blank" rel="noreferrer">
               <span>
@@ -36,17 +43,15 @@ export default function RecipeCard(props) {
               Recipe
             </a>
           </div>
-          <div className="recipe-card-info-right">
+          <div className="recipe-card-info-middle">
             {props.Recipe.ingredientLines.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
             ))}
           </div>
-          <div className="recipe-card-preview">
-            <iframe
-              title="preview"
-              src={props.Recipe.url}
-              frameborder="0"
-            ></iframe>
+          <div className="recipe-card-info-right">
+            {props.Recipe.healthLabels.map((label, index) => (
+              <p key={index}>{label}</p>
+            ))}
           </div>
         </div>
       </div>

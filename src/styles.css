@@ -330,8 +330,7 @@ footer {
 }
 
 .sidebar h5 {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .main-container {

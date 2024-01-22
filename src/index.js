@@ -12,6 +12,7 @@ import Assistant from "./pages/Assistant";
 import Favorites from "./pages/Favorites";
 import Preferences from "./pages/Preferences";
 import AccountSettings from "./pages/AccountSettings";
+import { loader as todaysMenyLoader } from "./pages/TodaysMenu";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/todays-menu",
             element: <TodaysMenu />,
-            errorElement: <ErrorPage />
+            errorElement: <ErrorPage />,
+            loader: todaysMenyLoader
           },
           {
             path: "daietpedia/explore",
