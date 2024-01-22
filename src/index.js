@@ -3,9 +3,15 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./styles.css";
 import Root from "./pages/Root";
-import Start from "./pages/Start";
+import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./error-page";
-import Sidebar from "./pages/Sidebar";
+import Sidebar from "./components/Sidebar";
+import TodaysMenu from "./pages/TodaysMenu";
+import Explore from "./pages/Explore";
+import Assistant from "./pages/Assistant";
+import Favorites from "./pages/Favorites";
+import Preferences from "./pages/Preferences";
+import AccountSettings from "./pages/AccountSettings";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "daietpedia/",
-        element: <Start />,
+        element: <LandingPage />,
         errorElement: <ErrorPage />
       },
       {
@@ -24,6 +30,36 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/home",
             element: "",
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/todays-menu",
+            element: <TodaysMenu />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/explore",
+            element: <Explore />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/assistant",
+            element: <Assistant />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/favorites",
+            element: <Favorites />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/preferences",
+            element: <Preferences />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/account-settings",
+            element: <AccountSettings />,
             errorElement: <ErrorPage />
           }
         ]

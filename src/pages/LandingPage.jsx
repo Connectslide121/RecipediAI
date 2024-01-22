@@ -15,7 +15,7 @@ import food10 from "../images/food10.webp";
 import food11 from "../images/food11.webp";
 import food12 from "../images/food12.jpg";
 
-export default function Start() {
+export default function LandingPage() {
   return (
     <>
       <section className="start-container">
@@ -26,15 +26,10 @@ export default function Start() {
           </header>
           <div>
             <p>
-              Explore a variety of recipes by indicating your preferred
-              ingredients, cuisine, and more.
-              <br />
-              Dealing with allergies? Planning a special dinner? Pregnant?{" "}
-              <br />
-              Tailor your culinary experience with our unique recipe platform.
-              Simply let our AI know your preferences, and unlock a world of
-              personalized recipes designed just for you.
+              Recipes tailored to your preferences. Simply tell our AI what you
+              need.
             </p>
+
             <Link to="./home" className="start-button">
               Get started
             </Link>
