@@ -1,13 +1,14 @@
 import React from "react";
 import { Form, Link, NavLink, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faRobot,
+  faUser,
+  faUtensils,
+  faEarthAmericas,
+  faStar,
+  faAsterisk
+} from "@fortawesome/free-solid-svg-icons";
 export default function Sidebar() {
   return (
     <>
@@ -66,6 +67,14 @@ export default function Sidebar() {
               </Link>
             </li>
           </ul>
+          <h5>
+            Recipes by{" "}
+            <span>
+              <a href="https://www.edamam.com/" target="blank">
+                Edamam API
+              </a>
+            </span>
+          </h5>
         </div>
         <div className="main-container">
           <Outlet />

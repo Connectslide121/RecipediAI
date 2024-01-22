@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  GetRandomStarter,
-  GetRandomMainCourse,
-  GetRandomDessert
-} from "../functions/Edamam";
+import { GetRecipeByDishType } from "../functions/Edamam";
 import RecipeCard from "../components/RecipeCard";
 
 export default function TodaysMenu() {
@@ -14,7 +10,7 @@ export default function TodaysMenu() {
   useEffect(() => {
     const fetchStarter = async () => {
       try {
-        const result = await GetRandomStarter();
+        const result = await GetRecipeByDishType("starter");
         setStarter(result);
         console.log("Starter recipe:", result);
       } catch (error) {
@@ -28,7 +24,7 @@ export default function TodaysMenu() {
   useEffect(() => {
     const fetchMainCourse = async () => {
       try {
-        const result = await GetRandomMainCourse();
+        const result = await GetRecipeByDishType("main_course");
         setMainCourse(result);
         console.log("Main course recipe:", result);
       } catch (error) {
@@ -42,7 +38,7 @@ export default function TodaysMenu() {
   useEffect(() => {
     const fetchDessert = async () => {
       try {
-        const result = await GetRandomDessert();
+        const result = await GetRecipeByDishType("desserts");
         setDessert(result);
         console.log("Dessert recipe:", result);
       } catch (error) {
