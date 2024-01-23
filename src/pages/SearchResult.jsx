@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { GetRecipesByQuery } from "../functions/Edamam";
 import RecipeCard from "../components/RecipeCard";
+import Header from "../components/Header";
 
 export async function loader({ params }) {
   const recipes = await GetRecipesByQuery(params.query);
@@ -14,7 +15,7 @@ export default function SearchResult() {
   console.log("recipes: ", recipes);
   return (
     <section>
-      <h1>Search Result</h1>
+      <Header text="Search Results" />
       {recipes && recipes.length > 0 ? (
         recipes.map((recipe) => <RecipeCard Recipe={recipe.recipe} />)
       ) : (

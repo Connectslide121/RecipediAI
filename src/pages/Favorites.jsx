@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/Header";
 
 export default function Favorites() {
   return (
     <section>
-      <h1>Favorites</h1>
+      <Header text="Favorites" />
       <p>This is the Favorites page</p>
     </section>
   );

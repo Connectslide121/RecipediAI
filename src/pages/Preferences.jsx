@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/Header";
 
 export default function Preferences() {
   return (
     <section>
-      <h1>Preferences</h1>
+      <Header text="Preferences" />
       <p>This is the Preferences page</p>
     </section>
   );

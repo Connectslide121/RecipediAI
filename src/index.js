@@ -5,7 +5,7 @@ import Root from "./pages/Root";
 import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./pages/error-page";
 import Sidebar from "./components/Sidebar";
-import TodaysMenu from "./pages/TodaysMenu";
+import MenuOfTheDay from "./pages/MenuOfTheDay";
 import Explore from "./pages/Explore";
 import Assistant from "./pages/Assistant";
 import Favorites from "./pages/Favorites";
@@ -15,7 +15,7 @@ import Searh from "./pages/Search";
 import SearchResult from "./pages/SearchResult";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { loader as todaysMenyLoader } from "./pages/TodaysMenu";
+import { loader as MenuOfTheDayLoader } from "./pages/MenuOfTheDay";
 import { action as sidebarAction } from "./components/Sidebar";
 import { loader as searchResultLoader } from "./pages/SearchResult";
 import Home from "./pages/Home";
@@ -46,9 +46,9 @@ const router = createBrowserRouter([
           },
           {
             path: "daietpedia/todays-menu",
-            element: <TodaysMenu />,
+            element: <MenuOfTheDay />,
             errorElement: <ErrorPage />,
-            loader: todaysMenyLoader
+            loader: MenuOfTheDayLoader
           },
           {
             path: "daietpedia/explore",

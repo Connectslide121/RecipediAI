@@ -6,6 +6,7 @@ export async function GetRecipeByDishType(dishType) {
 
     const randomRecipe =
       data.hits[Math.floor(Math.random() * data.hits.length)].recipe;
+
     return randomRecipe;
   } catch (error) {
     console.log(error);

@@ -44,7 +44,7 @@ export default function Sidebar() {
                 <span>
                   <FontAwesomeIcon icon={faUtensils} />
                 </span>
-                <p>Today's menu</p>
+                <p>Menu of the day</p>
               </NavLink>
             </li>
             <li>

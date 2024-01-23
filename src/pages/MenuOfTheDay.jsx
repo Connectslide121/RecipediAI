@@ -2,6 +2,7 @@ import React from "react";
 import { GetRecipeByDishType } from "../functions/Edamam";
 import RecipeCard from "../components/RecipeCard";
 import { useLoaderData } from "react-router-dom";
+import Header from "../components/Header";
 
 export async function loader() {
   try {
@@ -15,12 +16,12 @@ export async function loader() {
   }
 }
 
-export default function TodaysMenu() {
+export default function MenuOfTheDay() {
   const { recipes } = useLoaderData();
 
   return (
     <section>
-      <h1>Today's Menu</h1>
+      <Header text="Menu of the day" />
       <RecipeCard Recipe={recipes[0]} />
       <RecipeCard Recipe={recipes[1]} />
       <RecipeCard Recipe={recipes[2]} />
