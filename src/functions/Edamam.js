@@ -11,3 +11,14 @@ export async function GetRecipeByDishType(dishType) {
     console.log(error);
   }
 }
+
+export async function GetRecipesByQuery(query) {
+  try {
+    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&random=true&app_id=63572ae8&app_key=80bdf734c856159f004aca67212196ba`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.hits;
+  } catch (error) {
+    console.log(error);
+  }
+}

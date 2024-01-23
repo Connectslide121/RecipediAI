@@ -16,6 +16,7 @@ export async function loader() {
 
 export default function TodaysMenu() {
   const { starter, mainCourse, dessert } = useLoaderData();
+
   return (
     <div>
       <h1>Today's Menu</h1>

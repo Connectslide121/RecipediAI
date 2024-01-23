@@ -14,6 +14,7 @@ import food9 from "../images/food9.jpg";
 import food10 from "../images/food10.webp";
 import food11 from "../images/food11.webp";
 import food12 from "../images/food12.jpg";
+import "../styles/landingPageStyles.css";
 
 export default function LandingPage() {
   return (

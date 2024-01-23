@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Link, NavLink, Outlet } from "react-router-dom";
+import { Form, Link, NavLink, Outlet, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRobot,
@@ -10,13 +10,21 @@ import {
   faAsterisk,
   faMagnifyingGlass
 } from "@fortawesome/free-solid-svg-icons";
+import "../styles/sidebarStyles.css";
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const query = Object.fromEntries(formData);
+  return redirect(`daietpedia/search-result/${query.query}`);
+}
+
 export default function Sidebar() {
   return (
     <>
       <div className="main-content-container">
         <div className="sidebar">
-          <Form>
-            <input type="text" placeholder="Quick search" />
+          <Form method="post">
+            <input name="query" type="text" placeholder="Quick search" />
           </Form>
           <ul>
             <li>
@@ -36,7 +44,7 @@ export default function Sidebar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="daietpedia/assistant">
+              <NavLink to="daietpedia/search">
                 <span>
                   <FontAwesomeIcon icon={faMagnifyingGlass} />{" "}
                 </span>

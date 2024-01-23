@@ -6,7 +6,7 @@ import {
   faFlag,
   faUsers
 } from "@fortawesome/free-solid-svg-icons";
-import "../recipeCardStyles.css";
+import "../styles/recipeCardStyles.css";
 
 export default function RecipeCard(props) {
   return (

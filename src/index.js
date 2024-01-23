@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./styles.css";
+import "./styles/styles.css";
 import Root from "./pages/Root";
 import LandingPage from "./pages/LandingPage";
-import ErrorPage from "./error-page";
+import ErrorPage from "./pages/error-page";
 import Sidebar from "./components/Sidebar";
 import TodaysMenu from "./pages/TodaysMenu";
 import Explore from "./pages/Explore";
@@ -12,7 +11,13 @@ import Assistant from "./pages/Assistant";
 import Favorites from "./pages/Favorites";
 import Preferences from "./pages/Preferences";
 import AccountSettings from "./pages/AccountSettings";
+import Searh from "./pages/Search";
+import SearchResult from "./pages/SearchResult";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { loader as todaysMenyLoader } from "./pages/TodaysMenu";
+import { action as sidebarAction } from "./components/Sidebar";
+import { loader as searchResultLoader } from "./pages/SearchResult";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +30,10 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
+        path: "/",
         element: <Sidebar />,
         errorElement: <ErrorPage />,
+        action: sidebarAction,
         children: [
           {
             path: "daietpedia/home",
@@ -42,6 +49,17 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/explore",
             element: <Explore />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/search",
+            element: <Searh />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/search-result/:query",
+            element: <SearchResult />,
+            loader: searchResultLoader,
             errorElement: <ErrorPage />
           },
           {
