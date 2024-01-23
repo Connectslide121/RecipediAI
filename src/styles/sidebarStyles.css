@@ -80,7 +80,7 @@
   width: 0%;
   border-right: 5px solid var(--mainColor2);
   background-color: #fff;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.2s ease-in-out;
   z-index: -1;
 }
 

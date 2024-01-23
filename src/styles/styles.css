@@ -71,8 +71,7 @@ nav ul li a:active {
   background-color: #ddd;
 }
 
-.login,
-.register {
+.login {
   background-color: var(--mainColor1);
   margin-left: 20px;
   text-align: center;
@@ -83,16 +82,15 @@ nav ul li a:active {
   box-shadow: 0 0 10px var(--boxShadow);
   transition: background-color 0.2s ease;
   border-right: none;
+  font-size: 16px;
 }
 
-.login:hover,
-.register:hover {
+.login:hover {
   background-color: var(--mainColor1Hover);
   box-shadow: 0 0 10px var(--boxShadow);
 }
 
-.login:active,
-.register:active {
+.login:active {
   color: #333;
 }
 
@@ -123,10 +121,10 @@ footer {
 }
 
 .header-wrapper {
-  background-image: url(../images/banner.jpg);
+  background-image: url(../images/banner.avif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: 0 70%;
   height: 170px;
   display: flex;
   justify-content: center;
@@ -141,4 +139,9 @@ h1 {
   border-radius: 15px;
   color: #ffad7a;
   line-height: 1.1;
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 500;
 }
