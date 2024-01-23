@@ -1,9 +1,16 @@
-.search-form-wrapper {
+.search-page-wrapper {
   background-color: #fff;
   padding: 3%;
   margin: 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px #999;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+.search-form-wrapper {
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 70%;
-  gap: 50px;
+  width: 100%;
+  gap: 30px;
 }
 
 .search-form-wrapper form input {
@@ -45,7 +52,7 @@
   padding-left: 4px;
   width: 70%;
 }
-
+.preset-buttons button,
 .search-form-wrapper form button {
   text-decoration: none;
   border: none;
@@ -61,16 +68,28 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.preset-buttons button:hover,
 .search-form-wrapper form button:hover {
   background-color: #00b9b9;
   transform: scale(1.05);
   cursor: pointer;
 }
 
+.preset-buttons button span,
 .search-form-wrapper form button span {
   color: #fff;
   transition: color 0.2s ease;
 }
+
+.preset-buttons button:hover span,
 .search-form-wrapper form button:hover span {
   color: #ffad7a;
+}
+
+.preset-buttons {
+  width: 30%;
+}
+.preset-buttons button {
+  min-width: 100%;
+  margin: 10px 0;
 }

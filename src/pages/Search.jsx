@@ -3,7 +3,19 @@ import "../styles/searchStyles.css";
 import { Form } from "react-router-dom";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faEgg,
+  faCarrot,
+  faCoffee,
+  faUtensilSpoon,
+  faIceCream,
+  faCocktail,
+  faUtensils,
+  faBacon,
+  faCookie
+} from "@fortawesome/free-solid-svg-icons";
+import PresetButton from "../components/PresetButton";
 
 export default function Searh() {
   return (
@@ -20,7 +32,7 @@ export default function Searh() {
               className="search-input"
             />
             <div>
-              <label htmlFor="dishType">Dish type: </label>
+              <label htmlFor="dishType">Dish type:</label>
               <select name="dishType" id="dishType">
                 <option value=""></option>
                 <option value="starter">Starter</option>
@@ -57,7 +69,7 @@ export default function Searh() {
               </select>
             </div>
             <div>
-              <label htmlFor="mealType">Meal type</label>
+              <label htmlFor="mealType">Meal type:</label>
               <select name="mealType" id="mealType">
                 <option value=""></option>
                 <option value="breakfast">Breakfast</option>
@@ -68,7 +80,7 @@ export default function Searh() {
               </select>
             </div>
             <div>
-              <label htmlFor="diet">Diet</label>
+              <label htmlFor="diet">Diet:</label>
               <select name="diet" id="diet">
                 <option value=""></option>
                 <option value="balanced">Balanced</option>
@@ -80,7 +92,7 @@ export default function Searh() {
               </select>
             </div>
             <div>
-              <label htmlFor="health">Health</label>
+              <label htmlFor="health">Health:</label>
               <select name="health" id="health">
                 <option value=""></option>
                 <option value="alcohol-cocktail">Alcohol cocktail</option>
@@ -129,6 +141,80 @@ export default function Searh() {
               Search
             </button>
           </Form>
+        </div>
+        <div className="preset-buttons">
+          <PresetButton
+            dishType=""
+            mealType="breakfast"
+            diet="low-carb"
+            health=""
+            text="Low-carb breakfast"
+            icon={<FontAwesomeIcon icon={faBacon} />}
+          />
+          <PresetButton
+            dishType=""
+            mealType="lunch/dinner"
+            diet=""
+            health="vegan"
+            text="Vegan lunch"
+            icon={<FontAwesomeIcon icon={faCarrot} />}
+          />
+          <PresetButton
+            dishType="main course"
+            mealType=""
+            diet="high-protein"
+            health=""
+            text="High-protein main course"
+            icon={<FontAwesomeIcon icon={faUtensilSpoon} />}
+          />
+          <PresetButton
+            dishType="desserts"
+            mealType=""
+            diet=""
+            health="gluten-free"
+            text="Gluten-free dessert"
+            icon={<FontAwesomeIcon icon={faIceCream} />}
+          />
+          <PresetButton
+            dishType="drinks"
+            mealType=""
+            diet=""
+            health="alcohol-free"
+            text="Alcohol free drink"
+            icon={<FontAwesomeIcon icon={faCocktail} />}
+          />
+          <PresetButton
+            dishType="special occasions"
+            mealType="lunch/dinner"
+            diet="balanced"
+            health=""
+            text="Special dinner (balanced)"
+            icon={<FontAwesomeIcon icon={faUtensils} />}
+          />
+          <PresetButton
+            dishType=""
+            mealType="breakfast"
+            diet=""
+            health="vegetarian"
+            text="Vegetarian breakfast"
+            icon={<FontAwesomeIcon icon={faCoffee} />}
+          />
+          <PresetButton
+            dishType="biscuits and cookies"
+            mealType=""
+            diet="low-fat"
+            health=""
+            text="Low-fat cookies"
+            icon={<FontAwesomeIcon icon={faCookie} />}
+          />
+          <PresetButton
+            dishType="pancake"
+            mealType="breakfast"
+            diet="high-fiber"
+            health=""
+            text="High-fiber breakfast pancakes"
+            icon={<FontAwesomeIcon icon={faEgg} />}
+          />
         </div>
       </div>
     </section>
