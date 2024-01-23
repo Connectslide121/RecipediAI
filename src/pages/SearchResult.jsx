@@ -13,13 +13,13 @@ export default function SearchResult() {
   const { recipes } = useLoaderData();
   console.log("recipes: ", recipes);
   return (
-    <div>
+    <section>
       <h1>Search Result</h1>
       {recipes && recipes.length > 0 ? (
         recipes.map((recipe) => <RecipeCard Recipe={recipe.recipe} />)
       ) : (
         <p>No recipes found</p>
       )}
-    </div>
+    </section>
   );
 }

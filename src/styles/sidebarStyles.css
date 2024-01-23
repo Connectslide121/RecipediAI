@@ -8,6 +8,14 @@
   height: 100%;
   margin-top: 5vh;
   padding-bottom: 2%;
+  z-index: 1;
+}
+
+.sidebar.loading {
+  opacity: 0.25;
+  transition: opacity 200ms;
+  /* transition-delay: 200ms; */
+  pointer-events: none;
 }
 
 .sidebar form {
@@ -36,7 +44,7 @@
   display: flex;
   text-decoration: none;
   width: 100%;
-  padding: 20px;
+  padding: 5%;
   border-top: #ddd 1px solid;
   color: #ddd;
   background: transparent;

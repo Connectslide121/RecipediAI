@@ -8,21 +8,22 @@ export async function loader() {
     const starter = await GetRecipeByDishType("starter");
     const mainCourse = await GetRecipeByDishType("main_course");
     const dessert = await GetRecipeByDishType("desserts");
-    return { starter, mainCourse, dessert };
+    const recipes = [starter, mainCourse, dessert];
+    return { recipes };
   } catch (error) {
     console.error("Error fetching recipes:", error);
   }
 }
 
 export default function TodaysMenu() {
-  const { starter, mainCourse, dessert } = useLoaderData();
+  const { recipes } = useLoaderData();
 
   return (
-    <div>
+    <section>
       <h1>Today's Menu</h1>
-      <RecipeCard Recipe={starter} />
-      <RecipeCard Recipe={mainCourse} />
-      <RecipeCard Recipe={dessert} />
-    </div>
+      <RecipeCard Recipe={recipes[0]} />
+      <RecipeCard Recipe={recipes[1]} />
+      <RecipeCard Recipe={recipes[2]} />
+    </section>
   );
 }

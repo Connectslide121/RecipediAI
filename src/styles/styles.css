@@ -115,6 +115,12 @@ footer {
   min-height: 95vh;
 }
 
+.main-container.loading {
+  opacity: 0.25;
+  transition: opacity 200ms;
+  /* transition-delay: 200ms; */
+}
+
 h1 {
   margin: 30px;
 }

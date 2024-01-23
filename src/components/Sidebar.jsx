@@ -1,5 +1,12 @@
 import React from "react";
-import { Form, Link, NavLink, Outlet, redirect } from "react-router-dom";
+import {
+  Form,
+  Link,
+  NavLink,
+  Outlet,
+  redirect,
+  useNavigation
+} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRobot,
@@ -19,10 +26,15 @@ export async function action({ request }) {
 }
 
 export default function Sidebar() {
+  const navigation = useNavigation();
   return (
     <>
-      <div className="main-content-container">
-        <div className="sidebar">
+      <section className="main-content-container">
+        <div
+          className={
+            navigation.state === "loading" ? "loading sidebar" : "sidebar"
+          }
+        >
           <Form method="post">
             <input name="query" type="text" placeholder="Quick search" />
           </Form>
@@ -93,10 +105,16 @@ export default function Sidebar() {
             </span>
           </h5>
         </div>
-        <div className="main-container">
+        <main
+          className={
+            navigation.state === "loading"
+              ? "loading main-container"
+              : "main-container"
+          }
+        >
           <Outlet />
-        </div>
-      </div>
+        </main>
+      </section>
     </>
   );
 }

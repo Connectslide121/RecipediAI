@@ -27,8 +27,8 @@ export default function LandingPage() {
           </header>
           <div>
             <p>
-              Recipes tailored to your preferences. Simply tell our AI what you
-              need.
+              Recipes tailored to your preferences. Simply tell our AIssistant
+              what you need.
             </p>
 
             <Link to="./home" className="start-button">

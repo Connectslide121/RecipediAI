@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Explore() {
   return (
-    <div>
+    <section>
       <h1>Explore</h1>
       <p>This is the Explore page</p>
-    </div>
+    </section>
   );
 }

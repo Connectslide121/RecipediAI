@@ -18,6 +18,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { loader as todaysMenyLoader } from "./pages/TodaysMenu";
 import { action as sidebarAction } from "./components/Sidebar";
 import { loader as searchResultLoader } from "./pages/SearchResult";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +41,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: "daietpedia/home",
-            element: "",
+            element: <Home />,
             errorElement: <ErrorPage />
           },
           {
@@ -80,6 +84,21 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/account-settings",
             element: <AccountSettings />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/about",
+            element: <About />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/contact",
+            element: <Contact />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/login",
+            element: <Login />,
             errorElement: <ErrorPage />
           }
         ]

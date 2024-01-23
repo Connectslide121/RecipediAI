@@ -17,13 +17,13 @@ export default function Navbar() {
           <NavLink to="daietpedia/home">Home</NavLink>
         </li>
         <li>
-          <NavLink to="daietpedia/home">About</NavLink>
+          <NavLink to="daietpedia/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="daietpedia/home">Contact</NavLink>
+          <NavLink to="daietpedia/contact">Contact</NavLink>
         </li>
         <li>
-          <NavLink to="daietpedia/home" className="login">
+          <NavLink to="daietpedia/login" className="login">
             Login / Register
           </NavLink>
         </li>
