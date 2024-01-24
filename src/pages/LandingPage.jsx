@@ -34,7 +34,7 @@ export default function LandingPage() {
             <Link to="./home" className="start-button">
               Get started
             </Link>
-            <h5>
+            <h5 className="credit">
               Recipes by{" "}
               <span>
                 <a href="https://www.edamam.com/" target="blank">

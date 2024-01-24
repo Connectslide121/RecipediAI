@@ -36,7 +36,7 @@
   width: 100%;
 }
 
-.search-form-wrapper form div {
+.search-line-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,20 +52,29 @@
   padding-left: 4px;
   width: 70%;
 }
+
+.search-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 10%;
+  width: 100%;
+}
+
 .preset-buttons button,
 .search-form-wrapper form button {
   text-decoration: none;
   border: none;
   background-color: teal;
   color: #fff;
-  font-size: 16px;
-  padding: 10px;
   width: 150px;
   display: flex;
   justify-content: center;
   gap: 10px;
   border-radius: 50vh;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
 }
 
 .preset-buttons button:hover,
@@ -73,6 +82,11 @@
   background-color: #00b9b9;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.preset-buttons button:active,
+.search-form-wrapper form button:active {
+  color: black;
 }
 
 .preset-buttons button span,
@@ -88,8 +102,11 @@
 
 .preset-buttons {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2%;
 }
 .preset-buttons button {
   min-width: 100%;
-  margin: 10px 0;
 }

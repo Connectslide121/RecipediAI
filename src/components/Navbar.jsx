@@ -6,10 +6,10 @@ import title from "../images/title.png";
 export default function Navbar() {
   return (
     <nav>
-      <NavLink to="">
+      <NavLink to="/daietpedia">
         <img src={logo} alt="logo" className="navbar-image" />
       </NavLink>
-      <NavLink to="">
+      <NavLink to="/daietpedia">
         <img src={title} alt="title" className="navbar-image" />
       </NavLink>
       <ul>

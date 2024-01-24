@@ -1,40 +1,50 @@
 .recipe-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2% 96%;
+  column-gap: 2%;
   background-color: #fff;
   margin: 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px #999;
 }
 
-.recipe-card-image {
-  width: 20%;
+.recipe-card-dishtype {
   display: flex;
   justify-content: center;
-  align-items: baseline;
-  margin: 20px;
+  padding: 20px 0;
+  color: #fff;
+  border-radius: 10px 0 0 10px;
+}
+
+.recipe-card-dishtype p {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recipe-card-info-wrapper {
+  display: grid;
+  grid-template-columns: 14% 20% 40% 20%;
+  column-gap: 2%;
+  padding: 20px 20px 20px 0;
 }
 
 .recipe-card-image img {
-  margin: 10px;
-  width: 12vw;
-  height: 12vw;
+  width: 100%;
   border: solid 3px teal;
 }
 
-.recipe-card-info {
-  display: flex;
-  width: 80%;
-}
-
-.recipe-card-info-left {
-  width: 25%;
-  padding: 30px 10px;
+.recipe-card-overview {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 30px;
+  border-left: solid 1px #666;
 }
 
-.recipe-card-info-left a {
+.recipe-card-overview a {
   text-decoration: none;
   background-color: teal;
   color: #fff;
@@ -47,16 +57,20 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.recipe-card-info-left a:hover {
+.recipe-card-overview a:hover {
   background-color: #00b9b9;
   transform: scale(1.05);
 }
 
-.recipe-card-info-left a span {
+.recipe-card-overview a:active {
+  color: black;
+}
+
+.recipe-card-overview a span {
   color: #fff;
   transition: color 0.2s ease;
 }
-.recipe-card-info-left a:hover span {
+.recipe-card-overview a:hover span {
   color: #ffad7a;
 }
 
@@ -65,20 +79,18 @@
   margin-right: 10px;
 }
 
-.recipe-card-info-middle {
-  width: 45%;
-  padding: 30px 10px 30px 30px;
+.recipe-card-ingredients {
+  padding: 0 30px;
+  border-right: solid 1px #666;
 }
 
-.recipe-card-info-right {
-  width: 40%;
+.recipe-card-tags {
   height: fit-content;
-  padding: 30px 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.recipe-card-info-right p {
+.recipe-card-tags p {
   background: #eee;
   border-radius: 3px;
   color: #666;
@@ -89,4 +101,5 @@
   position: relative;
   margin: 0 10px 10px 0;
   text-decoration: none;
+  font-size: 12px;
 }

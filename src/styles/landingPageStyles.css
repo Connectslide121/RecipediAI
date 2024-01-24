@@ -40,9 +40,9 @@
 
 .start-button {
   background-color: var(--mainColor1);
-  padding: 20px;
   margin-top: 5%;
   width: 150px;
+  padding: 20px;
   text-align: center;
   text-decoration: none;
   border-radius: 50vh;
@@ -52,13 +52,13 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.start-left div a:hover {
+.start-button:hover {
   transform: scale(1.1);
   background-color: var(--mainColor1Hover);
 }
 
-.start-left div a:active {
-  background-color: var(--mainColor2Hover);
+.start-button:active {
+  color: black;
 }
 
 .start-left div h5 {

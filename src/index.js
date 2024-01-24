@@ -18,6 +18,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { loader as MenuOfTheDayLoader } from "./pages/MenuOfTheDay";
 import { action as sidebarAction } from "./components/Sidebar";
 import { loader as searchResultLoader } from "./pages/SearchResult";
+import { action as searchAction } from "./pages/Search";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
@@ -58,7 +59,8 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/search",
             element: <Searh />,
-            errorElement: <ErrorPage />
+            errorElement: <ErrorPage />,
+            action: searchAction
           },
           {
             path: "daietpedia/search-result/:query",

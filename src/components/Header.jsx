@@ -15,7 +15,7 @@ export default function Header(props) {
   }
   return (
     <div className="header-wrapper">
-      <h1>{props.text}</h1>
+      <h1 className="header-text">{props.text}</h1>
     </div>
   );
 }

@@ -36,7 +36,12 @@ export default function Sidebar() {
           }
         >
           <Form method="post">
-            <input name="query" type="text" placeholder="Quick search" />
+            <input
+              name="query"
+              type="text"
+              placeholder="Quick search"
+              required
+            />
           </Form>
           <ul>
             <li>
@@ -96,7 +101,7 @@ export default function Sidebar() {
               </Link>
             </li>
           </ul>
-          <h5>
+          <h5 className="credit">
             Recipes by{" "}
             <span>
               <a href="https://www.edamam.com/" target="blank">

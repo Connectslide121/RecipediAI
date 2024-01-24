@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/searchStyles.css";
-import { Form } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,9 +13,29 @@ import {
   faCocktail,
   faUtensils,
   faBacon,
-  faCookie
+  faCookie,
+  faBrush
 } from "@fortawesome/free-solid-svg-icons";
 import PresetButton from "../components/PresetButton";
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const input = Object.fromEntries(formData);
+  console.log("query: ", input);
+
+  if (
+    input.query === "" &&
+    input.diet === "" &&
+    input.dishType === "" &&
+    input.health === "" &&
+    input.mealType === ""
+  ) {
+    return redirect(`../daietpedia/search-result/random`);
+  }
+
+  const query = `${input.query}`; //********************************* HANDLE INPUT HERE ******/
+  return redirect(`../daietpedia/search-result/${query}`);
+}
 
 export default function Searh() {
   return (
@@ -31,7 +51,7 @@ export default function Searh() {
               type="text"
               className="search-input"
             />
-            <div>
+            <div className="search-line-wrapper">
               <label htmlFor="dishType">Dish type:</label>
               <select name="dishType" id="dishType">
                 <option value=""></option>
@@ -68,7 +88,7 @@ export default function Searh() {
                 <option value="sweets">Sweets</option>
               </select>
             </div>
-            <div>
+            <div className="search-line-wrapper">
               <label htmlFor="mealType">Meal type:</label>
               <select name="mealType" id="mealType">
                 <option value=""></option>
@@ -79,7 +99,7 @@ export default function Searh() {
                 <option value="teatime">Teatime</option>
               </select>
             </div>
-            <div>
+            <div className="search-line-wrapper">
               <label htmlFor="diet">Diet:</label>
               <select name="diet" id="diet">
                 <option value=""></option>
@@ -91,7 +111,7 @@ export default function Searh() {
                 <option value="low-sodium">Low sodium</option>
               </select>
             </div>
-            <div>
+            <div className="search-line-wrapper">
               <label htmlFor="health">Health:</label>
               <select name="health" id="health">
                 <option value=""></option>
@@ -134,12 +154,22 @@ export default function Searh() {
                 <option value="wheat-free">Wheat free</option>
               </select>
             </div>
-            <button type="submit">
-              <span>
-                <FontAwesomeIcon icon={faSearch} />
-              </span>
-              Search
-            </button>
+            <div className="search-buttons">
+              <PresetButton
+                dishType=""
+                mealType=""
+                diet=""
+                health=""
+                text="Clear"
+                icon={<FontAwesomeIcon icon={faBrush} />}
+              />
+              <button type="submit">
+                <span>
+                  <FontAwesomeIcon icon={faSearch} />
+                </span>
+                Search
+              </button>
+            </div>
           </Form>
         </div>
         <div className="preset-buttons">

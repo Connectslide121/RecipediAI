@@ -12,12 +12,46 @@ export default function RecipeCard(props) {
   return (
     props.Recipe && (
       <div className="recipe-card">
-        <div className="recipe-card-image">
-          <img src={props.Recipe.image} alt="recipe" />
+        <div
+          className="recipe-card-dishtype"
+          style={{
+            backgroundColor: props.Recipe.dishType.includes(
+              "starter",
+              "salad",
+              "side dish"
+            )
+              ? "#66b659"
+              : props.Recipe.dishType.includes(
+                  "main course",
+                  "pasta",
+                  "egg",
+                  "pizza"
+                )
+              ? "#e8324a"
+              : props.Recipe.dishType.includes("desserts")
+              ? "#f8b03b"
+              : props.Recipe.dishType.includes("soup", "seafood")
+              ? "#3a5ca7"
+              : props.Recipe.dishType.includes(
+                  "bread",
+                  "biscuits and cookies",
+                  "cereals",
+                  "pancake",
+                  "pastry",
+                  "pies and tarts"
+                )
+              ? "#7e4a2a"
+              : "purple"
+          }}
+        >
+          <p>{props.Recipe.dishType.join(" / ")}</p>
         </div>
-        <div className="recipe-card-info">
-          <div className="recipe-card-info-left">
-            <h3>{props.Recipe.label}</h3>
+        <div className="recipe-card-info-wrapper">
+          <div className="recipe-card-image">
+            <img src={props.Recipe.image} alt="recipe" />
+          </div>
+          <div className="recipe-card-overview">
+            <h3 className="recipe-card-title">{props.Recipe.label}</h3>
             <p>
               <FontAwesomeIcon className="recipe-card-icon" icon={faFlag} />
               {props.Recipe.cuisineType
@@ -43,12 +77,12 @@ export default function RecipeCard(props) {
               Recipe
             </a>
           </div>
-          <div className="recipe-card-info-middle">
+          <div className="recipe-card-ingredients">
             {props.Recipe.ingredientLines.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
             ))}
           </div>
-          <div className="recipe-card-info-right">
+          <div className="recipe-card-tags">
             {props.Recipe.healthLabels.map((label, index) => (
               <p key={index}>{label}</p>
             ))}

@@ -3,6 +3,7 @@ import React from "react";
 export default function PresetButton(props) {
   return (
     <button
+      type="button"
       onClick={() => {
         document.getElementById("dishType").value = props.dishType;
         document.getElementById("mealType").value = props.mealType;
