@@ -75,9 +75,19 @@
   color: #ffad7a;
 }
 
+.recipe-card-title {
+  margin-top: 0;
+}
+
 .recipe-card-icon {
   color: #ffad7a;
   margin-right: 10px;
+}
+
+.recipe-card-cuisine-type {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .recipe-card-ingredients {

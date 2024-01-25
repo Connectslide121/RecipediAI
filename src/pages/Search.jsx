@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/searchStyles.css";
-import { Form, Outlet, redirect } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -33,14 +33,6 @@ export async function action({ request }) {
   ) {
     return redirect(`../daietpedia/search-result/random`);
   }
-
-  // const query = `${input.query}${
-  //   input.dishType && `&dishType=${input.dishType}`
-  // }${input.mealType && `&mealType=${input.mealType}`}${
-  //   input.cuisineType && `&cuisineType=${input.cuisineType}`
-  // }${input.diet && `&diet=${input.diet}`}${
-  //   input.health && `&health=${input.health}`
-  // }`;
 
   return redirect(
     `../daietpedia/search/result/` +

@@ -9,7 +9,6 @@ import {
 import "../styles/recipeCardStyles.css";
 
 export default function RecipeCard(props) {
-  console.log("props: ", props);
   return (
     props.Recipe && (
       <div className="recipe-card">
@@ -63,14 +62,18 @@ export default function RecipeCard(props) {
           </div>
           <div className="recipe-card-overview">
             <h3 className="recipe-card-title">{props.Recipe.label}</h3>
-            <p>
-              <FontAwesomeIcon className="recipe-card-icon" icon={faFlag} />
-              {props.Recipe.cuisineType
-                .map(
-                  (cuisine) => cuisine[0].toUpperCase() + cuisine.substring(1)
-                )
-                .join(", ")}
-            </p>
+            <div className="recipe-card-cuisine-type">
+              {props.Recipe.cuisineType &&
+                props.Recipe.cuisineType.map((cuisine, index) => (
+                  <p key={index}>
+                    <FontAwesomeIcon
+                      className="recipe-card-icon"
+                      icon={faFlag}
+                    />
+                    {cuisine[0].toUpperCase() + cuisine.substring(1)}
+                  </p>
+                ))}
+            </div>
             {props.Recipe.totalTime !== 0 && (
               <p>
                 <FontAwesomeIcon className="recipe-card-icon" icon={faClock} />

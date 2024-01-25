@@ -5,9 +5,7 @@ import RecipeCard from "../components/RecipeCard";
 import Header from "../components/Header";
 
 export async function loader({ params }) {
-  console.log("params: ", params);
   const recipes = await GetRecipesByQuery(params.query);
-  console.log("recipes: ", recipes);
   return { recipes, params };
 }
 
@@ -52,8 +50,6 @@ export default function SearchResult() {
     paramsObject[key] = value;
   });
 
-  console.log("paramsObject: ", paramsObject);
-
   return (
     <section>
       <Header />
@@ -61,14 +57,16 @@ export default function SearchResult() {
         Search criteria:{" "}
         <span>
           {Object.entries(paramsObject).map(([key, value]) => (
-            <p>
+            <p key={key}>
               {key}: {value}
             </p>
           ))}
         </span>
       </h3>
       {recipes && recipes.length > 0 ? (
-        recipes.map((recipe) => <RecipeCard Recipe={recipe.recipe} />)
+        recipes.map((recipe, index) => (
+          <RecipeCard key={index} Recipe={recipe.recipe} />
+        ))
       ) : (
         <p className="no-result">No recipes found</p>
       )}

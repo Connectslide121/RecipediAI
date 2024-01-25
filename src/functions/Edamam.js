@@ -1,39 +1,25 @@
-// import axios from "axios";
+import axios from "axios";
 
 export async function GetRecipeByDishType(dishType) {
-  try {
-    const response = await fetch(
+  const response = await axios
+    .get(
       `https://api.edamam.com/api/recipes/v2?type=public&dishType=${dishType}&random=true&app_id=63572ae8&app_key=80bdf734c856159f004aca67212196ba`
-    );
-    const data = await response.json();
-
-    return data.hits[0].recipe;
-  } catch (error) {
-    console.log(error);
-  }
+    )
+    .catch(function (error) {
+      alert("Error fetching recipes by dish type");
+      console.error("Error fetching recipes by dish type", error);
+    });
+  return response.data.hits[0].recipe;
 }
 
 export async function GetRecipesByQuery(query) {
-  try {
-    const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?type=public&${query}&random=true&app_id=63572ae8&app_key=80bdf734c856159f004aca67212196ba`
-    );
-    const data = await response.json();
-
-    return data.hits;
-  } catch (error) {
-    console.log(error);
-  }
-
-  // const API_KEY = "80bdf734c856159f004aca67212196ba";
-  // const response = await axios.get(`https://api.edamam.com/api/recipes/v2/`, {
-  //   data: {
-  //     type: "public",
-  //     Authorization: `Bearer ${API_KEY}`,
-  //     app_id: "63572ae8",
-  //     q: query
-  //   }
-  // });
-
-  // console.log(response);
+  const response = await axios
+    .get(
+      `https://api.edamam.com/api/recipes/v2/?type=public&${query}&random=true&app_id=63572ae8&app_key=80bdf734c856159f004aca67212196ba`
+    )
+    .catch(function (error) {
+      alert("Error fetching recipes by query");
+      console.error("Error fetching recipes by query", error);
+    });
+  return response.data.hits;
 }

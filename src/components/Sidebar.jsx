@@ -119,6 +119,10 @@ export default function Sidebar() {
               : "main-container"
           }
         >
+          <div className="loading-screen">
+            <div className="spinner"></div>
+            <h3>loading...</h3>
+          </div>
           <Outlet />
         </main>
       </section>

@@ -18,7 +18,6 @@ export async function loader() {
 
 export default function Menu() {
   const { recipes } = useLoaderData();
-  console.log("recipes: ", recipes);
 
   return (
     <section>

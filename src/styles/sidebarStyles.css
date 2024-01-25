@@ -12,6 +12,7 @@
 }
 
 .sidebar.loading {
+  /**** LOADING ANIMATION ****/
   opacity: 0.25;
   transition: opacity 200ms;
   pointer-events: none;
