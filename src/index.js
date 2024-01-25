@@ -19,8 +19,6 @@ import { loader as MenuLoader } from "./pages/Menu";
 import { action as sidebarAction } from "./components/Sidebar";
 import { loader as searchResultLoader } from "./pages/SearchResult";
 import { action as searchAction } from "./pages/Search";
-import { loader as nutritionLoader } from "./pages/Nutrition";
-import { action as nutritionAction } from "./pages/Nutrition";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
@@ -73,9 +71,7 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/nutrition",
             element: <Nutrition />,
-            errorElement: <ErrorPage />,
-            action: nutritionAction,
-            loader: nutritionLoader
+            errorElement: <ErrorPage />
           },
           {
             path: "daietpedia/favorites",

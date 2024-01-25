@@ -201,3 +201,20 @@ h3 {
   border-radius: 20px;
   box-shadow: 0 0 10px var(--boxShadow);
 }
+
+.tooltip-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: -20px;
+  left: -310px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  z-index: 1;
+}

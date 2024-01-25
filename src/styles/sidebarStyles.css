@@ -88,6 +88,10 @@
   width: 100%;
 }
 
+.sidebar ul li a:active::before {
+  background-color: #ccc;
+}
+
 .sidebar ul li a span {
   color: var(--mainColor2);
   margin-right: 20px;

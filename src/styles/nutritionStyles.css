@@ -1,0 +1,66 @@
+.nutrition-page-wrapper {
+  background-color: #fff;
+  padding: 3%;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+.nutrition-form-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 30px;
+}
+
+.nutrition-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  gap: 30px;
+}
+
+.nutrition-form-wrapper form input {
+  height: 40px;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 6px;
+  border: 2px solid #ddd;
+  width: 70%;
+}
+
+.nutrition-line-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nutrition-form-wrapper form select {
+  height: 40px;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  border: 2px solid #ddd;
+  padding-left: 4px;
+  width: 70%;
+}
+
+.nutrition-results {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+}
+
+.nutrition-result-line {
+  display: flex;
+  gap: 10px;
+}
