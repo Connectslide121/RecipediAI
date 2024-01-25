@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/daietpedia/static/css/main.6c64988a.css",
-    "main.js": "/daietpedia/static/js/main.70f67a52.js",
+    "main.css": "/daietpedia/static/css/main.cd01e179.css",
+    "main.js": "/daietpedia/static/js/main.8ac667bd.js",
     "static/media/food5.jpeg": "/daietpedia/static/media/food5.2a84400628024ccb2302.jpeg",
     "static/media/food2.jpg": "/daietpedia/static/media/food2.0b70a050f9dd26132cce.jpg",
+    "static/media/banner.avif": "/daietpedia/static/media/banner.4c80d5f56e2ddd042210.avif",
     "static/media/food9.jpg": "/daietpedia/static/media/food9.666efffa1d28c6b35929.jpg",
     "static/media/food6.webp": "/daietpedia/static/media/food6.dd421642b658cec3041d.webp",
     "static/media/food1.jpg": "/daietpedia/static/media/food1.92d01b795285ae5cc6e7.jpg",
@@ -17,11 +18,11 @@
     "static/media/title.png": "/daietpedia/static/media/title.7b5b5510841c29ec8b40.png",
     "static/media/food12.jpg": "/daietpedia/static/media/food12.aee8e2dab6b3ab024cc1.jpg",
     "index.html": "/daietpedia/index.html",
-    "main.6c64988a.css.map": "/daietpedia/static/css/main.6c64988a.css.map",
-    "main.70f67a52.js.map": "/daietpedia/static/js/main.70f67a52.js.map"
+    "main.cd01e179.css.map": "/daietpedia/static/css/main.cd01e179.css.map",
+    "main.8ac667bd.js.map": "/daietpedia/static/js/main.8ac667bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c64988a.css",
-    "static/js/main.70f67a52.js"
+    "static/css/main.cd01e179.css",
+    "static/js/main.8ac667bd.js"
   ]
 }
