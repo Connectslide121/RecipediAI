@@ -49,6 +49,7 @@
   background-color: teal;
   color: #fff;
   padding: 10px;
+  height: fit-content;
   width: 150px;
   display: flex;
   justify-content: center;

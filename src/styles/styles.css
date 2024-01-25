@@ -115,7 +115,6 @@ footer {
 .main-container.loading {
   opacity: 0.25;
   transition: opacity 200ms;
-  /* transition-delay: 200ms; */
 }
 
 .header-wrapper {
@@ -123,22 +122,11 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 70%;
-  height: 170px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px var(--boxShadow);
-}
-
-.header-text {
-  font-size: 54px;
-  background: transparent;
-  backdrop-filter: blur(10px);
-  padding: 10px 20px;
-  border-radius: 15px;
-  color: #555;
-  line-height: 1;
-  font-weight: 400;
 }
 
 .credit {
@@ -149,10 +137,20 @@ footer {
   color: #555;
 }
 
-.search-results-query {
+h3 {
   color: #555;
   text-align: center;
   margin-top: 30px;
+}
+
+.search-results-query span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.search-results-query span p {
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .no-result {

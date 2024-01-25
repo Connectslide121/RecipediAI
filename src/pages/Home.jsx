@@ -4,8 +4,8 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <section>
-      <Header text="Home" />
-      <p>This is the home page.</p>
+      <Header />
+      <p>This is the Home page</p>
     </section>
   );
 }

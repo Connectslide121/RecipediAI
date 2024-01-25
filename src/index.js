@@ -5,8 +5,8 @@ import Root from "./pages/Root";
 import LandingPage from "./pages/LandingPage";
 import ErrorPage from "./pages/error-page";
 import Sidebar from "./components/Sidebar";
-import MenuOfTheDay from "./pages/MenuOfTheDay";
-import Explore from "./pages/Explore";
+import Menu from "./pages/Menu";
+import Home from "./pages/Home";
 import Assistant from "./pages/Assistant";
 import Favorites from "./pages/Favorites";
 import Preferences from "./pages/Preferences";
@@ -15,14 +15,14 @@ import Searh from "./pages/Search";
 import SearchResult from "./pages/SearchResult";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { loader as MenuOfTheDayLoader } from "./pages/MenuOfTheDay";
+import { loader as MenuLoader } from "./pages/Menu";
 import { action as sidebarAction } from "./components/Sidebar";
 import { loader as searchResultLoader } from "./pages/SearchResult";
 import { action as searchAction } from "./pages/Search";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
+import Nutrition from "./pages/Nutrition";
 
 const router = createBrowserRouter([
   {
@@ -46,15 +46,10 @@ const router = createBrowserRouter([
             errorElement: <ErrorPage />
           },
           {
-            path: "daietpedia/todays-menu",
-            element: <MenuOfTheDay />,
+            path: "daietpedia/menu",
+            element: <Menu />,
             errorElement: <ErrorPage />,
-            loader: MenuOfTheDayLoader
-          },
-          {
-            path: "daietpedia/explore",
-            element: <Explore />,
-            errorElement: <ErrorPage />
+            loader: MenuLoader
           },
           {
             path: "daietpedia/search",
@@ -63,7 +58,7 @@ const router = createBrowserRouter([
             action: searchAction
           },
           {
-            path: "daietpedia/search-result/:query",
+            path: "daietpedia/search/result/:query",
             element: <SearchResult />,
             loader: searchResultLoader,
             errorElement: <ErrorPage />
@@ -71,6 +66,11 @@ const router = createBrowserRouter([
           {
             path: "daietpedia/assistant",
             element: <Assistant />,
+            errorElement: <ErrorPage />
+          },
+          {
+            path: "daietpedia/nutrition",
+            element: <Nutrition />,
             errorElement: <ErrorPage />
           },
           {
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
             errorElement: <ErrorPage />
           },
           {
-            path: "daietpedia/account-settings",
+            path: "daietpedia/account",
             element: <AccountSettings />,
             errorElement: <ErrorPage />
           },

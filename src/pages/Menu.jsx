@@ -16,12 +16,14 @@ export async function loader() {
   }
 }
 
-export default function MenuOfTheDay() {
+export default function Menu() {
   const { recipes } = useLoaderData();
+  console.log("recipes: ", recipes);
 
   return (
     <section>
-      <Header text="Menu of the day" />
+      <Header />
+      <h3>Menu of the day</h3>
       <RecipeCard Recipe={recipes[0]} />
       <RecipeCard Recipe={recipes[1]} />
       <RecipeCard Recipe={recipes[2]} />

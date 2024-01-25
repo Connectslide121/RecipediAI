@@ -9,42 +9,53 @@ import {
 import "../styles/recipeCardStyles.css";
 
 export default function RecipeCard(props) {
+  console.log("props: ", props);
   return (
     props.Recipe && (
       <div className="recipe-card">
         <div
           className="recipe-card-dishtype"
-          style={{
-            backgroundColor: props.Recipe.dishType.includes(
-              "starter",
-              "salad",
-              "side dish"
-            )
-              ? "#66b659"
-              : props.Recipe.dishType.includes(
-                  "main course",
-                  "pasta",
-                  "egg",
-                  "pizza"
-                )
-              ? "#e8324a"
-              : props.Recipe.dishType.includes("desserts")
-              ? "#f8b03b"
-              : props.Recipe.dishType.includes("soup", "seafood")
-              ? "#3a5ca7"
-              : props.Recipe.dishType.includes(
-                  "bread",
-                  "biscuits and cookies",
-                  "cereals",
-                  "pancake",
-                  "pastry",
-                  "pies and tarts"
-                )
-              ? "#7e4a2a"
-              : "purple"
-          }}
+          style={
+            props.Recipe.dishType && {
+              backgroundColor: props.Recipe.dishType.includes("starter")
+                ? "#66b659"
+                : props.Recipe.dishType.includes("salad")
+                ? "#66b659"
+                : props.Recipe.dishType.includes("side dish")
+                ? "#66b659"
+                : props.Recipe.dishType.includes("main course")
+                ? "#e8324a"
+                : props.Recipe.dishType.includes("pasta")
+                ? "#e8324a"
+                : props.Recipe.dishType.includes("pizza")
+                ? "#e8324a"
+                : props.Recipe.dishType.includes("egg")
+                ? "#f8b03b"
+                : props.Recipe.dishType.includes("sandwiches")
+                ? "#f8b03b"
+                : props.Recipe.dishType.includes("desserts")
+                ? "#f8b03b"
+                : props.Recipe.dishType.includes("soup")
+                ? "#3a5ca7"
+                : props.Recipe.dishType.includes("seafood")
+                ? "#3a5ca7"
+                : props.Recipe.dishType.includes("bread")
+                ? "#7e4a2a"
+                : props.Recipe.dishType.includes("biscuits and cookies")
+                ? "#7e4a2a"
+                : props.Recipe.dishType.includes("cereals")
+                ? "#7e4a2a"
+                : props.Recipe.dishType.includes("pancake")
+                ? "#7e4a2a"
+                : props.Recipe.dishType.includes("pastry")
+                ? "#7e4a2a"
+                : props.Recipe.dishType.includes("pies and tarts")
+                ? "#7e4a2a"
+                : "purple"
+            }
+          }
         >
-          <p>{props.Recipe.dishType.join(" / ")}</p>
+          {props.Recipe.dishType && <p>{props.Recipe.dishType.join(" / ")}</p>}
         </div>
         <div className="recipe-card-info-wrapper">
           <div className="recipe-card-image">

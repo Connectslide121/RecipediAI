@@ -12,17 +12,17 @@ import {
   faRobot,
   faUser,
   faUtensils,
-  faEarthAmericas,
   faStar,
   faAsterisk,
-  faMagnifyingGlass
+  faMagnifyingGlass,
+  faHeartPulse
 } from "@fortawesome/free-solid-svg-icons";
 import "../styles/sidebarStyles.css";
 
 export async function action({ request }) {
   const formData = await request.formData();
   const query = Object.fromEntries(formData);
-  return redirect(`daietpedia/search-result/${query.query}`);
+  return redirect(`daietpedia/search/result/q=${query.query}`);
 }
 
 export default function Sidebar() {
@@ -45,19 +45,11 @@ export default function Sidebar() {
           </Form>
           <ul>
             <li>
-              <NavLink to="daietpedia/todays-menu">
+              <NavLink to="daietpedia/menu">
                 <span>
                   <FontAwesomeIcon icon={faUtensils} />
                 </span>
                 <p>Menu of the day</p>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="daietpedia/explore">
-                <span>
-                  <FontAwesomeIcon icon={faEarthAmericas} />
-                </span>
-                <p>Explore</p>
               </NavLink>
             </li>
             <li>
@@ -73,7 +65,17 @@ export default function Sidebar() {
                 <span>
                   <FontAwesomeIcon icon={faRobot} />
                 </span>
-                <p className="beta">dAIet assistant</p>
+                <p className="beta">DAIET assistant</p>
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <NavLink to="daietpedia/nutrition">
+                <span>
+                  <FontAwesomeIcon icon={faHeartPulse} />
+                </span>
+                <p>Nutrition</p>
               </NavLink>
             </li>
           </ul>
@@ -93,7 +95,7 @@ export default function Sidebar() {
               </NavLink>
             </li>
             <li>
-              <Link to="daietpedia/account-settings">
+              <Link to="daietpedia/account">
                 <span>
                   <FontAwesomeIcon icon={faUser} />
                 </span>

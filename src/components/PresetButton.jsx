@@ -7,6 +7,7 @@ export default function PresetButton(props) {
       onClick={() => {
         document.getElementById("dishType").value = props.dishType;
         document.getElementById("mealType").value = props.mealType;
+        document.getElementById("cuisineType").value = props.cuisineType;
         document.getElementById("diet").value = props.diet;
         document.getElementById("health").value = props.health;
       }}
