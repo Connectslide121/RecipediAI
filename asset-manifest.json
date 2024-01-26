@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daietpedia/static/css/main.90dbb91b.css",
-    "main.js": "/daietpedia/static/js/main.b8c186bb.js",
+    "main.css": "/daietpedia/static/css/main.88c021cf.css",
+    "main.js": "/daietpedia/static/js/main.c1ce51a0.js",
     "static/media/food5.jpeg": "/daietpedia/static/media/food5.2a84400628024ccb2302.jpeg",
     "static/media/food2.jpg": "/daietpedia/static/media/food2.0b70a050f9dd26132cce.jpg",
     "static/media/banner.avif": "/daietpedia/static/media/banner.4c80d5f56e2ddd042210.avif",
@@ -9,6 +9,7 @@
     "static/media/food6.webp": "/daietpedia/static/media/food6.dd421642b658cec3041d.webp",
     "static/media/food1.jpg": "/daietpedia/static/media/food1.92d01b795285ae5cc6e7.jpg",
     "static/media/food10.webp": "/daietpedia/static/media/food10.b6ae773c0bb5ce91bf0c.webp",
+    "static/media/paella.jpeg": "/daietpedia/static/media/paella.c94aea4ea117e86db042.jpeg",
     "static/media/asian.jpeg": "/daietpedia/static/media/asian.0e1c4482cf5af7348302.jpeg",
     "static/media/food11.webp": "/daietpedia/static/media/food11.7ce08a8130d86a18f377.webp",
     "static/media/food3.jpg": "/daietpedia/static/media/food3.f8d998ab6414d1316896.jpg",
@@ -20,11 +21,11 @@
     "static/media/AIssistant.png": "/daietpedia/static/media/AIssistant.bfde4835168f42aa01b3.png",
     "static/media/food12.jpg": "/daietpedia/static/media/food12.aee8e2dab6b3ab024cc1.jpg",
     "index.html": "/daietpedia/index.html",
-    "main.90dbb91b.css.map": "/daietpedia/static/css/main.90dbb91b.css.map",
-    "main.b8c186bb.js.map": "/daietpedia/static/js/main.b8c186bb.js.map"
+    "main.88c021cf.css.map": "/daietpedia/static/css/main.88c021cf.css.map",
+    "main.c1ce51a0.js.map": "/daietpedia/static/js/main.c1ce51a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.90dbb91b.css",
-    "static/js/main.b8c186bb.js"
+    "static/css/main.88c021cf.css",
+    "static/js/main.c1ce51a0.js"
   ]
 }
