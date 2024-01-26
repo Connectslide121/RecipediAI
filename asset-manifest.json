@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daietpedia/static/css/main.1901cc81.css",
-    "main.js": "/daietpedia/static/js/main.011a6aa9.js",
+    "main.css": "/daietpedia/static/css/main.90dbb91b.css",
+    "main.js": "/daietpedia/static/js/main.b8c186bb.js",
     "static/media/food5.jpeg": "/daietpedia/static/media/food5.2a84400628024ccb2302.jpeg",
     "static/media/food2.jpg": "/daietpedia/static/media/food2.0b70a050f9dd26132cce.jpg",
     "static/media/banner.avif": "/daietpedia/static/media/banner.4c80d5f56e2ddd042210.avif",
@@ -9,6 +9,7 @@
     "static/media/food6.webp": "/daietpedia/static/media/food6.dd421642b658cec3041d.webp",
     "static/media/food1.jpg": "/daietpedia/static/media/food1.92d01b795285ae5cc6e7.jpg",
     "static/media/food10.webp": "/daietpedia/static/media/food10.b6ae773c0bb5ce91bf0c.webp",
+    "static/media/asian.jpeg": "/daietpedia/static/media/asian.0e1c4482cf5af7348302.jpeg",
     "static/media/food11.webp": "/daietpedia/static/media/food11.7ce08a8130d86a18f377.webp",
     "static/media/food3.jpg": "/daietpedia/static/media/food3.f8d998ab6414d1316896.jpg",
     "static/media/food7.jpg": "/daietpedia/static/media/food7.b80ea4f48952da5948f0.jpg",
@@ -16,13 +17,14 @@
     "static/media/logo.png": "/daietpedia/static/media/logo.4e11450170966600a919.png",
     "static/media/food8.webp": "/daietpedia/static/media/food8.66c07bbb468cb7941876.webp",
     "static/media/title.png": "/daietpedia/static/media/title.7b5b5510841c29ec8b40.png",
+    "static/media/AIssistant.png": "/daietpedia/static/media/AIssistant.bfde4835168f42aa01b3.png",
     "static/media/food12.jpg": "/daietpedia/static/media/food12.aee8e2dab6b3ab024cc1.jpg",
     "index.html": "/daietpedia/index.html",
-    "main.1901cc81.css.map": "/daietpedia/static/css/main.1901cc81.css.map",
-    "main.011a6aa9.js.map": "/daietpedia/static/js/main.011a6aa9.js.map"
+    "main.90dbb91b.css.map": "/daietpedia/static/css/main.90dbb91b.css.map",
+    "main.b8c186bb.js.map": "/daietpedia/static/js/main.b8c186bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.1901cc81.css",
-    "static/js/main.011a6aa9.js"
+    "static/css/main.90dbb91b.css",
+    "static/js/main.b8c186bb.js"
   ]
 }
