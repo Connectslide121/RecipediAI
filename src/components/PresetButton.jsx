@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function PresetButton(props) {
+  console.log();
   return (
     <button
       type="button"
@@ -9,7 +10,13 @@ export default function PresetButton(props) {
         document.getElementById("mealType").value = props.mealType;
         document.getElementById("cuisineType").value = props.cuisineType;
         document.getElementById("diet").value = props.diet;
-        document.getElementById("health").value = props.health;
+        Array.from(document.getElementsByClassName("checkbox")).forEach(
+          (checkbox) => {
+            checkbox.checked = false;
+          }
+        );
+        props.health &&
+          (document.getElementById(props.health.toString()).checked = true);
       }}
     >
       <span>{props.icon}</span>

@@ -92,11 +92,17 @@
 .health-tooltip-icon {
   color: teal;
   font-size: 24px;
-  padding: 20px 0;
+  margin: 20px 0;
+  height: fit-content;
+  border-radius: 50vh;
 }
 
 .health-tooltip-icon p {
   font-size: 16px;
+}
+
+.health-tooltip-icon:hover {
+  color: var(--mainColor1Hover);
 }
 
 .recipe-card-ingredients {

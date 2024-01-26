@@ -14,8 +14,33 @@ export default function SearchResult() {
   const { params } = useLoaderData();
 
   const paramsArray = params.query.replace(/^&/, "").split("&");
+  const healthIndex = paramsArray.findIndex((param) =>
+    param.startsWith("health=")
+  );
+  const healthParams =
+    healthIndex !== -1 ? paramsArray.slice(0, healthIndex + 1) : paramsArray;
+
+  const otherParams =
+    healthIndex !== -1
+      ? paramsArray.slice(healthIndex + 1).map((param) => param.split("&"))
+      : [];
+
+  const otherParamsString = otherParams.reduce((acc, param, index) => {
+    if (index > 0) {
+      acc += ", ";
+    }
+    acc += param.join(", ");
+    return acc;
+  }, "");
+
+  const lastElement = healthParams[healthParams.length - 1];
+  const updatedLastElement = `${lastElement},${otherParamsString}`;
+  healthParams[healthParams.length - 1] = updatedLastElement;
+
+  console.log(healthParams);
+
   const paramsObject = {};
-  paramsArray.forEach((param) => {
+  healthParams.forEach((param) => {
     let [key, value] = param.split("=");
 
     switch (key) {
@@ -23,24 +48,24 @@ export default function SearchResult() {
         key = "Query";
         break;
 
-      case "cuisineType":
-        key = "Cuisine type";
+      case "dishType":
+        key = "Dish type";
         break;
 
       case "mealType":
         key = "Meal type";
         break;
 
-      case "health":
-        key = "Health";
+      case "cuisineType":
+        key = "Cuisine type";
         break;
 
       case "diet":
         key = "Diet";
         break;
 
-      case "dishType":
-        key = "Dish type";
+      case "health":
+        key = "Health";
         break;
 
       default:

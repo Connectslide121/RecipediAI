@@ -21,7 +21,13 @@ import PresetButton from "../components/PresetButton";
 export async function action({ request }) {
   const formData = await request.formData();
   const input = Object.fromEntries(formData);
-  console.log("query: ", input);
+  const regularKeys = ["query", "dishType", "mealType", "cuisineType", "diet"];
+  const checkboxKeys = Object.keys(input).filter(
+    (key) => !regularKeys.includes(key)
+  );
+  const checkboxKeyString =
+    checkboxKeys.length > 0 ? `${checkboxKeys.join("&")}` : "";
+  console.log("checkboxKeyString: ", checkboxKeyString);
 
   if (
     input.query === "" &&
@@ -29,7 +35,7 @@ export async function action({ request }) {
     input.mealType === "" &&
     input.cuisineType === "" &&
     input.diet === "" &&
-    input.health === ""
+    checkboxKeyString === ""
   ) {
     return redirect(`../daietpedia/search/result/q=random`);
   }
@@ -41,11 +47,49 @@ export async function action({ request }) {
       (input.mealType ? `&mealType=${input.mealType}` : "") +
       (input.cuisineType ? `&cuisineType=${input.cuisineType}` : "") +
       (input.diet ? `&diet=${input.diet}` : "") +
-      (input.health ? `&health=${input.health}` : "")
+      (checkboxKeyString !== "" ? `&health=${checkboxKeyString}` : "")
   );
 }
 
 export default function Searh() {
+  const healthLabels = [
+    "alcohol-cocktail",
+    "alcohol-free",
+    "celery-free",
+    "crustacean-free",
+    "dairy-free",
+    "DASH",
+    "egg-free",
+    "fish-free",
+    "fodmap-free",
+    "gluten-free",
+    "immuno-supportive",
+    "keto-friendly",
+    "kidney-friendly",
+    "kosher",
+    "low-potassium",
+    "low-sugar",
+    "lupine-free",
+    "Mediterranean",
+    "mollusk-free",
+    "mustard-free",
+    "No-oil-added",
+    "paleo",
+    "peanut-free",
+    "pescatarian",
+    "pork-free",
+    "red-meat-free",
+    "sesame-free",
+    "shellfish-free",
+    "soy-free",
+    "sugar-conscious",
+    "sulfite-free",
+    "tree-nut-free",
+    "vegan",
+    "vegetarian",
+    "wheat-free"
+  ];
+
   return (
     <>
       <section>
@@ -149,55 +193,40 @@ export default function Searh() {
                   <option value="low-sodium">Low sodium</option>
                 </select>
               </div>
-              <div className="search-line-wrapper">
-                <label htmlFor="health">Health:</label>
-                <select name="health" id="health">
-                  <option value=""></option>
-                  <option value="alcohol-cocktail">Alcohol cocktail</option>
-                  <option value="alcohol-free">Alcohol free</option>
-                  <option value="celery-free">Celery free</option>
-                  <option value="crustacean-free">Crustacean free</option>
-                  <option value="dairy-free">Dairy free</option>
-                  <option value="DASH">
-                    DASH- Dietary Approaches to Stop Hypertension
-                  </option>
-                  <option value="egg-free">Egg free</option>
-                  <option value="fish-free">Fish free</option>
-                  <option value="fodmap-free">Fodmap free</option>
-                  <option value="gluten-free">Gluten free</option>
-                  <option value="immuno-supportive">Immuno supportive</option>
-                  <option value="keto-friendly">Keto friendly</option>
-                  <option value="kidney-friendly">Kidney friendly</option>
-                  <option value="kosher">Kosher</option>
-                  <option value="low-potassium">Low potassium</option>
-                  <option value="low-sugar">Low sugar</option>
-                  <option value="lupine-free">Lupine free</option>
-                  <option value="Mediterranean">Mediterranean</option>
-                  <option value="mollusk-free">Mollusk free</option>
-                  <option value="mustard-free">Mustard free</option>
-                  <option value="No-oil-added">No oil added</option>
-                  <option value="paleo">Paleo</option>
-                  <option value="peanut-free">Peanut free</option>
-                  <option value="pescatarian">Pescatarian</option>
-                  <option value="pork-free">Pork free</option>
-                  <option value="red-meat-free">Red meat free</option>
-                  <option value="sesame-free">Sesame free</option>
-                  <option value="shellfish-free">Shellfish free</option>
-                  <option value="soy-free">Soy free</option>
-                  <option value="sugar-conscious">Sugar conscious</option>
-                  <option value="sulfite-free">Sulfite free</option>
-                  <option value="tree-nut-free">Tree-nut free</option>
-                  <option value="vegan">Vegan</option>
-                  <option value="vegetarian">Vegetarian</option>
-                  <option value="wheat-free">Wheat free</option>
-                </select>
-              </div>
+              <details name="details" id="details">
+                <summary
+                  name="summary"
+                  id="summary"
+                  className="dropdown-button"
+                >
+                  Health preferences, allergens...
+                </summary>
+                {
+                  <div className="dropdown-content">
+                    {healthLabels.map((healthLabel, index) => (
+                      <label name="checkbox" id="checkbox" key={index}>
+                        <input
+                          className="checkbox"
+                          name={healthLabel}
+                          id={healthLabel}
+                          value={healthLabel}
+                          type="checkbox"
+                          // checked={selectedOptions.includes(option)}
+                          // onChange={handleCheckboxChange}
+                        />
+                        {healthLabel.replace(/-/g, " ")}{" "}
+                      </label>
+                    ))}
+                  </div>
+                }
+              </details>
               <div className="search-buttons">
                 <PresetButton
+                  className="search-buttons-button"
                   text="Clear"
                   icon={<FontAwesomeIcon icon={faBrush} />}
                 />
-                <button type="submit">
+                <button className="search-buttons-button" type="submit">
                   <span>
                     <FontAwesomeIcon icon={faSearch} />
                   </span>

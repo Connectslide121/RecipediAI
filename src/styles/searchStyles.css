@@ -10,7 +10,7 @@
 }
 
 .search-form-wrapper {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,15 +53,76 @@
   width: 70%;
 }
 
+.search-form-wrapper form details {
+  width: 100%;
+}
+
+.dropdown-button {
+  cursor: pointer;
+  border: 2px solid #ddd;
+  height: 40px;
+  background-color: white;
+  width: 100%;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+.dropdown-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: 4px;
+  margin-left: 27%;
+  margin-right: 1%;
+  border-top: 8px solid #15171b;
+  border-inline: 5px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(-180deg);
+}
+
+.dropdown-content {
+  border: 1px solid #ccc;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dropdown-content label {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1em auto;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  font-size: 14px;
+  height: 30px;
+}
+
+.dropdown-content label input {
+  height: 15px;
+}
+
 .search-buttons {
   display: flex;
   justify-content: right;
-  gap: 10%;
+  gap: 2%;
   width: 100%;
 }
 
 .preset-buttons button,
-.search-form-wrapper form button {
+.search-buttons button {
   text-decoration: none;
   border: none;
   background-color: teal;
@@ -78,25 +139,25 @@
 }
 
 .preset-buttons button:hover,
-.search-form-wrapper form button:hover {
+.search-buttons button:hover {
   background-color: #00b9b9;
   transform: scale(1.05);
   cursor: pointer;
 }
 
 .preset-buttons button:active,
-.search-form-wrapper form button:active {
+.search-buttons button:active {
   color: black;
 }
 
 .preset-buttons button span,
-.search-form-wrapper form button span {
+.search-buttons button span {
   color: #fff;
   transition: color 0.2s ease;
 }
 
 .preset-buttons button:hover span,
-.search-form-wrapper form button:hover span {
+.search-buttons button:hover span {
   color: #ffad7a;
 }
 
@@ -104,8 +165,7 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2%;
+  gap: 8px;
 }
 .preset-buttons button {
   min-width: 100%;

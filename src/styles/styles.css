@@ -138,6 +138,16 @@ footer {
   border-radius: 50%;
   padding: 1px;
   background: conic-gradient(#0000 10%, #008080) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 16px),
+      #000 calc(100% - 14px)
+    );
   mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
     radial-gradient(
       farthest-side,
@@ -192,7 +202,7 @@ h3 {
 
 .no-result {
   text-align: center;
-  margin: 5% 20%;
+  margin: 5%;
   padding: 50px;
   font-size: 20px;
   font-style: italic;
@@ -221,7 +231,7 @@ h3 {
 
 .tooltip-array {
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: -310px;
   background-color: black;
   color: white;
