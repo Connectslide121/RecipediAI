@@ -148,7 +148,7 @@ export default function Nutrition() {
               icon={<FontAwesomeIcon icon={faCircleQuestion} />}
               text="BMI (Body Mass Index) is a measurement of body fat based on height and weight that applies to both men and women. It can be used to indicate if you are overweight, obese, underweight or normal."
             />
-            <h4>BMI</h4>
+            <h4>BMI:</h4>
             <p>{bmi}</p>
           </div>
           <div className="nutrition-result-line">
@@ -156,7 +156,7 @@ export default function Nutrition() {
               icon={<FontAwesomeIcon icon={faCircleQuestion} />}
               text="Returns the class from Body Mass Index value. Possible results are: Underweight, Normal, Overweight, Obese Class 1, Obese Class 2, Morbid Obesity"
             />
-            <h4>BMI CLASS</h4>
+            <h4>BMI CLASS:</h4>
             <p>{bmiClass}</p>
           </div>
           <div className="nutrition-result-line">
@@ -164,7 +164,7 @@ export default function Nutrition() {
               icon={<FontAwesomeIcon icon={faCircleQuestion} />}
               text="BMR (Basal Metabolic Rate) is the amount of energy expended while at rest in a neutrally temperate environment."
             />
-            <h4>BMR</h4>
+            <h4>BMR:</h4>
             <p>{bmr}</p>
           </div>
           <div className="nutrition-result-line">
@@ -172,7 +172,7 @@ export default function Nutrition() {
               icon={<FontAwesomeIcon icon={faCircleQuestion} />}
               text="An estimation of individual's daily kilocalorie requirements based on a basal metabolic rate (BMR) using the Harris–Benedict equation"
             />
-            <h4>DAILY CALORIES</h4>
+            <h4>DAILY CALORIES:</h4>
             <p>{dailyCalories}</p>
           </div>
         </div>

@@ -6,22 +6,22 @@
   box-shadow: 0 0 10px #999;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15%;
 }
 
 .nutrition-form-wrapper {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   gap: 30px;
 }
 
 .nutrition-form-wrapper form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 70%;
+  width: 100%;
   gap: 30px;
 }
 
@@ -53,14 +53,26 @@
 }
 
 .nutrition-results {
-  width: 50%;
+  background-color: teal;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5%;
+  padding: 5%;
+  gap: 20px;
+  color: #fff;
+  border-radius: 6px;
 }
 
 .nutrition-result-line {
   display: flex;
   gap: 10px;
+}
+
+.nutrition-result-line h4 {
+  text-wrap: nowrap;
+}
+
+.nutrition-result-line div,
+.nutrition-result-line h4 {
 }
