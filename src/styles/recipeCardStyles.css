@@ -1,7 +1,6 @@
 .recipe-card {
   display: grid;
   grid-template-columns: 2% 96%;
-  column-gap: 2%;
   background-color: #fff;
   margin: 40px;
   border-radius: 10px;
@@ -26,22 +25,21 @@
 
 .recipe-card-info-wrapper {
   display: grid;
-  grid-template-columns: 14% 20% 40% 20%;
+  grid-template-columns: 25% 25% 42% 3%;
   column-gap: 2%;
-  padding: 20px 20px 20px 0;
 }
 
 .recipe-card-image img {
+  height: 100%;
   width: 100%;
-  border: solid 3px teal;
+  object-fit: cover;
 }
 
 .recipe-card-overview {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-left: 30px;
-  border-left: solid 1px #666;
+  padding: 20px 30px;
 }
 
 .recipe-card-overview a {
@@ -77,6 +75,7 @@
 
 .recipe-card-title {
   margin-top: 0;
+  text-align: left;
 }
 
 .recipe-card-icon {
@@ -90,27 +89,16 @@
   gap: 3px;
 }
 
+.health-tooltip-icon {
+  color: teal;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+.health-tooltip-icon p {
+  font-size: 16px;
+}
+
 .recipe-card-ingredients {
-  padding: 0 30px;
-  border-right: solid 1px #666;
-}
-
-.recipe-card-tags {
-  height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.recipe-card-tags p {
-  background: #eee;
-  border-radius: 3px;
-  color: #666;
-  display: inline-block;
-  height: 24px;
-  line-height: 16px;
-  padding: 4px 6px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  font-size: 12px;
+  padding: 20px 30px;
 }

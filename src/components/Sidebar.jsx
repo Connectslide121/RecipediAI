@@ -22,6 +22,9 @@ import "../styles/sidebarStyles.css";
 export async function action({ request }) {
   const formData = await request.formData();
   const query = Object.fromEntries(formData);
+  if (query.query === "") {
+    query.query = "random";
+  }
   return redirect(`daietpedia/search/result/q=${query.query}`);
 }
 
@@ -36,12 +39,7 @@ export default function Sidebar() {
           }
         >
           <Form method="post">
-            <input
-              name="query"
-              type="text"
-              placeholder="Quick search"
-              required
-            />
+            <input name="query" type="text" placeholder="Quick search" />
           </Form>
           <ul>
             <li>

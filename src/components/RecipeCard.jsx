@@ -4,9 +4,11 @@ import {
   faClock,
   faKitchenSet,
   faFlag,
-  faUsers
+  faUsers,
+  faCircleInfo
 } from "@fortawesome/free-solid-svg-icons";
 import "../styles/recipeCardStyles.css";
+import TooltipIconArray from "./TooltipIconArray";
 
 export default function RecipeCard(props) {
   return (
@@ -96,10 +98,11 @@ export default function RecipeCard(props) {
               <li key={index}>{ingredient}</li>
             ))}
           </div>
-          <div className="recipe-card-tags">
-            {props.Recipe.healthLabels.map((label, index) => (
-              <p key={index}>{label}</p>
-            ))}
+          <div className="health-tooltip-icon">
+            <TooltipIconArray
+              array={props.Recipe.healthLabels}
+              icon={<FontAwesomeIcon icon={faCircleInfo} />}
+            />
           </div>
         </div>
       </div>

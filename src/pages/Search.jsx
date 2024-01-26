@@ -31,7 +31,7 @@ export async function action({ request }) {
     input.diet === "" &&
     input.health === ""
   ) {
-    return redirect(`../daietpedia/search-result/random`);
+    return redirect(`../daietpedia/search/result/q=random`);
   }
 
   return redirect(

@@ -218,3 +218,15 @@ h3 {
   width: 300px;
   z-index: 1;
 }
+
+.tooltip-array {
+  position: absolute;
+  top: -20px;
+  left: -310px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  z-index: 1;
+}
