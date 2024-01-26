@@ -34,7 +34,7 @@ export default function SearchResult() {
   }, "");
 
   const lastElement = healthParams[healthParams.length - 1];
-  const updatedLastElement = `${lastElement},${otherParamsString}`;
+  const updatedLastElement = `${lastElement}, ${otherParamsString}`;
   healthParams[healthParams.length - 1] = updatedLastElement;
 
   console.log(healthParams);

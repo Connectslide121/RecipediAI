@@ -90,10 +90,11 @@
 }
 
 .health-tooltip-icon {
-  color: teal;
+  color: var(--mainColor1);
   font-size: 24px;
   margin: 20px 0;
   height: fit-content;
+  width: fit-content;
   border-radius: 50vh;
 }
 
