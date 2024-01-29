@@ -1,4 +1,4 @@
-![alt text](https://github.com/Connectslide121/RecipediAI/blob/master/Connect_banner_github.png)
+![alt text](https://github.com/Connectslide121/daietpedia/blob/master/Connect_banner_github.png)
 
 # dAIetPedia
 
