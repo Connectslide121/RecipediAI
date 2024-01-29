@@ -4,6 +4,8 @@
 
 Welcome to DAIETpedia, the innovative recipe website where your culinary journey is personalized by AI. Whether you're searching for recipes by ingredient, cuisine, or dietary restrictions, DAIETpedia is here to suggest a whole menu tailored just for you!
 
+Visit [here](https://connectslide121.github.io/daietpedia/)
+
 ## Features
 
 - **AI-Powered Recipe Suggestions**: Tell our AI your preferences, and it will suggest recipes that cater to your taste and dietary needs.
