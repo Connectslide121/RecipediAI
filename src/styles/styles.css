@@ -19,6 +19,30 @@
   height: 100vh;
 }
 
+#under-construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 70vh;
+}
+
+#under-construction svg {
+  font-size: 100px;
+  color: var(--mainColor2);
+}
+
+#under-construction h1 {
+  font-size: 30px;
+  color: var(--mainColor1);
+}
+
+#under-construction p {
+  font-style: italic;
+}
+
 .container {
   display: flex;
   flex-direction: column;
