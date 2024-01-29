@@ -1,3 +1,5 @@
+![alt text](https://github.com/Connectslide121/daietpedia/blob/master/Connect_banner_github.png)
+
 # DAIETpedia
 
 Welcome to DAIETpedia, the innovative recipe website where your culinary journey is personalized by AI. Whether you're searching for recipes by ingredient, cuisine, or dietary restrictions, DAIETpedia is here to suggest a whole menu tailored just for you!
