@@ -77,7 +77,6 @@ export default function SearchResult() {
 
   return (
     <section>
-      <Header />
       <h3 className="search-results-query">
         Search criteria:{" "}
         <span>

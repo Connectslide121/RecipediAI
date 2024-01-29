@@ -15,7 +15,8 @@ import {
   faStar,
   faAsterisk,
   faMagnifyingGlass,
-  faHeartPulse
+  faHeartPulse,
+  faHome
 } from "@fortawesome/free-solid-svg-icons";
 import "../styles/sidebarStyles.css";
 
@@ -38,6 +39,16 @@ export default function Sidebar() {
             navigation.state === "loading" ? "loading sidebar" : "sidebar"
           }
         >
+          <ul>
+            <li>
+              <NavLink to="daietpedia/home">
+                <span>
+                  <FontAwesomeIcon icon={faHome} />
+                </span>
+                <p>Home</p>
+              </NavLink>
+            </li>
+          </ul>
           <Form method="post">
             <input name="query" type="text" placeholder="Quick search" />
           </Form>

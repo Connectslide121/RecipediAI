@@ -1,8 +1,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 3%;
+  gap: 20px;
+  padding: 25px;
 }
 
 .grid-item {
@@ -18,18 +18,28 @@
   transition: transform 0.15s ease;
 }
 
+.grid-item span {
+  transition: color 0.3s ease;
+}
+
 .grid-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+}
+
+.grid-item:hover span {
+  color: var(--mainColor2Hover);
 }
 
 .grid-item--2x2 {
   grid-column: span 2;
   grid-row: span 2;
 }
+
 .grid-item--2x1 {
   grid-column: span 2;
   grid-row: span 1;
 }
+
 .grid-item--1x2 {
   grid-column: span 1;
   grid-row: span 2;
@@ -62,6 +72,11 @@
 
 .grid-item-1 h5 {
   color: var(--mainColor2);
+  transition: color 0.3s ease;
+}
+
+.grid-item-1:hover h5 {
+  color: var(--mainColor2Hover);
 }
 
 .grid-item-2 {
@@ -77,11 +92,241 @@
 .grid-item-2 h2 {
   background-color: #008080af;
   color: #fff;
-  width: 50%;
   padding: 3px;
+  width: 50%;
   border-radius: 6px;
 }
 
 .grid-item-2 h2 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-3 {
+  background-image: url(../images/cocktail.webp);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  text-align: end;
+}
+
+.grid-item-3 h2 {
+  background-color: #008080af;
+  color: #fff;
+  padding: 3px;
+  width: 34%;
+  border-radius: 6px;
+}
+
+.grid-item-3 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-4 {
+  background-image: url(../images/smoothies.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: end;
+}
+
+.grid-item-4 h2 {
+  background-color: #008080af;
+  color: #fff;
+  padding: 3px;
+  width: 93%;
+  border-radius: 6px;
+}
+
+.grid-item-4 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-5 {
+  background: #f6f8f9;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #f6f8f9 0%,
+    #e5ebee 30%,
+    #d7dee3 60%,
+    #f5f7f9 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid-item-5 h2 {
+  color: var(--mainColor1);
+}
+
+.grid-item-5 h2 span {
+  color: var(--mainColor2);
+  margin-right: 15px;
+}
+
+.grid-item-5 h5 {
+  color: var(--mainColor1);
+}
+
+.grid-item-6 {
+  background-image: url(../images/cookies.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  text-align: start;
+}
+
+.grid-item-6 h2 {
+  background-color: #008080af;
+  color: #fff;
+  padding: 3px;
+  width: 70%;
+  border-radius: 6px;
+}
+
+.grid-item-6 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-7 {
+  background-image: url(../images/vegan.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.grid-item-7 h2 {
+  background-color: #008080af;
+  color: #fff;
+  padding: 3px;
+  width: 60%;
+  border-radius: 6px;
+}
+
+.grid-item-7 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-8 {
+  background-image: url(../images/pizza.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  text-align: end;
+}
+
+.grid-item-8 h2 {
+  background-color: #008080af;
+  color: #fff;
+  padding: 3px;
+  width: 80%;
+  border-radius: 6px;
+}
+
+.grid-item-8 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-9 {
+  background-image: url(../images/paella.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: start;
+}
+
+.grid-item-9 h2 {
+  background-color: #008080af;
+  color: #fff;
+  width: 60%;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.grid-item-9 h2 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-10 {
+  background-image: url(../images/sandwich.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  text-align: end;
+}
+
+.grid-item-10 h2 {
+  background-color: #008080af;
+  color: #fff;
+  width: 70%;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.grid-item-10 h2 span {
+  color: var(--mainColor2);
+}
+
+.grid-item-11 {
+  background: #f6f8f9;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #f6f8f9 0%,
+    #e5ebee 30%,
+    #d7dee3 60%,
+    #f5f7f9 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid-item-11 h2 {
+  color: var(--mainColor1);
+}
+
+.grid-item-11 h2 span {
+  color: var(--mainColor2);
+  margin-right: 15px;
+}
+
+.grid-item-11 h5 {
+  color: var(--mainColor1);
+}
+
+.grid-item-12 {
+  background-image: url(../images/cake.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  text-align: end;
+}
+
+.grid-item-12 h2 {
+  background-color: #008080af;
+  color: #fff;
+  width: 70%;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.grid-item-12 h2 span {
   color: var(--mainColor2);
 }

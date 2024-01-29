@@ -2,6 +2,7 @@
   display: flex;
   overflow-x: hidden;
   height: 95vh;
+  background: #f6f8f9;
 }
 
 .start-left {
@@ -36,6 +37,7 @@
   padding: 20px;
   box-shadow: 0 0 10px var(--boxShadow);
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .start-button {
@@ -67,7 +69,6 @@
 
 .start-right {
   background-color: var(--mainColor1);
-  z-index: -1;
   width: 50%;
   padding-right: 50px;
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);

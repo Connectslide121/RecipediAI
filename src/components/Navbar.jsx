@@ -14,9 +14,6 @@ export default function Navbar() {
       </NavLink>
       <ul>
         <li>
-          <NavLink to="daietpedia/home">Home</NavLink>
-        </li>
-        <li>
           <NavLink to="daietpedia/about">About</NavLink>
         </li>
         <li>

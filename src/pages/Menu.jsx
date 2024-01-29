@@ -23,9 +23,11 @@ export default function Menu() {
     <section>
       <Header />
       <h3>Menu of the day</h3>
-      <RecipeCard Recipe={recipes[0]} />
-      <RecipeCard Recipe={recipes[1]} />
-      <RecipeCard Recipe={recipes[2]} />
+      <div className="menu-cards">
+        <RecipeCard Recipe={recipes[0]} />
+        <RecipeCard Recipe={recipes[1]} />
+        <RecipeCard Recipe={recipes[2]} />
+      </div>
     </section>
   );
 }

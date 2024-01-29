@@ -128,9 +128,7 @@ export default function Searh() {
                   </option>
                   <option value="pancake">Pancake</option>
                   <option value="pasta">Pasta</option>
-                  <option value="pastry">Pastry</option>
                   <option value="pies and tarts">Pies and tarts</option>
-                  <option value="pizza">Pizza</option>
                   <option value="preps">Preps</option>
                   <option value="preserve">Preserve</option>
                   <option value="salad">Salad</option>
