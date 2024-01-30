@@ -96,6 +96,7 @@ git push origin feature/AmazingFeature
 ### Acknowledgements
 
 [Edamam API](https://www.edamam.com/)
+
 [OpenAI API](https://openai.com/blog/openai-api)
 
 ### License
