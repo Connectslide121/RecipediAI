@@ -23,46 +23,77 @@ Visit our website: [DAIETpedia](https://connectslide121.github.io/daietpedia/)
 
 Our recipes are powered by the [Edamam API](https://www.edamam.com/), providing you with a diverse and extensive collection of dishes to try.
 
-## Development
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Prerequisites
+## Prerequisites
 
 - Node.js (version specified in `package.json`)
 
-### Installation
+## Installation
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/Connectslide121/daietpedia.git
-   ```
 
-Navigate to the project directory:
+```sh
+git clone https://github.com/Connectslide121/daietpedia.git
+```
+
+2. Navigate to the project directory:
+
+```sh
 cd daietpedia
+```
 
-Install the dependencies:
+3. Install dependencies:
+
+```sh
 npm install
+```
 
-Available Scripts
+4. Start the development server:
+
+```sh
+npm start
+```
+
+### Available Scripts
+
 In the project directory, you can run:
 
-npm start: Runs the app in development mode.
-npm run build: Builds the app for production to the build folder.
-npm run deploy: Deploys the app to GitHub Pages.
-npm test: Launches the test runner in interactive watch mode.
-npm run eject: Removes the single build dependency from your project.
-Contributing
+`npm start`: Runs the app in development mode.
+`npm run build`: Builds the app for production to the build folder.
+`npm run deploy`: Deploys the app to GitHub Pages.
+`npm test`: Launches the test runner in interactive watch mode.
+`npm run eject`: Removes the single build dependency from your project.
+
+### Contributing
+
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-License
-Distributed under the MIT License. See LICENSE for more information.
+1. Fork the Project
 
-Acknowledgements
-Edamam API
-OpenAI
+2. Create your Feature Branch
+
+```sh
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your Changes
+
+```sh
+git commit -m 'Add some AmazingFeature'
+```
+
+4. Push to the Branch
+
+```sh
+git push origin feature/AmazingFeature
+```
+
+5. Open a Pull Request
+
+### Acknowledgements
+
+[Edamam API](https://www.edamam.com/)
+[OpenAI API](https://openai.com/blog/openai-api)
+
+### License
+
+Distributed under the MIT License. See LICENSE for more information.
