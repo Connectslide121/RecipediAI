@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/searchStyles.css";
-import { Form, redirect } from "react-router-dom";
+import { Form, Outlet, redirect } from "react-router-dom";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -300,6 +300,7 @@ export default function Searh() {
           </div>
         </div>
       </section>
+      <Outlet />
     </>
   );
 }

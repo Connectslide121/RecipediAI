@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { GetRecipesByQuery } from "../functions/Edamam";
 import RecipeCard from "../components/RecipeCard";
-import Header from "../components/Header";
+import { ParamsSplitter } from "../functions/ParamsSplitter";
 
 export async function loader({ params }) {
   const recipes = await GetRecipesByQuery(params.query);
@@ -13,34 +13,10 @@ export default function SearchResult() {
   const { recipes } = useLoaderData();
   const { params } = useLoaderData();
 
-  const paramsArray = params.query.replace(/^&/, "").split("&");
-  const healthIndex = paramsArray.findIndex((param) =>
-    param.startsWith("health=")
-  );
-  const healthParams =
-    healthIndex !== -1 ? paramsArray.slice(0, healthIndex + 1) : paramsArray;
+  const paramsObject = ParamsSplitter(params);
 
-  const otherParams =
-    healthIndex !== -1
-      ? paramsArray.slice(healthIndex + 1).map((param) => param.split("&"))
-      : [];
-
-  const otherParamsString = otherParams.reduce((acc, param, index) => {
-    if (index > 0) {
-      acc += ", ";
-    }
-    acc += param.join(", ");
-    return acc;
-  }, "");
-
-  const lastElement = healthParams[healthParams.length - 1];
-  const updatedLastElement = `${lastElement}, ${otherParamsString}`;
-  healthParams[healthParams.length - 1] = updatedLastElement;
-
-  console.log(healthParams);
-
-  const paramsObject = {};
-  healthParams.forEach((param) => {
+  const searchCriteria = {};
+  paramsObject.forEach((param) => {
     let [key, value] = param.split("=");
 
     switch (key) {
@@ -72,15 +48,19 @@ export default function SearchResult() {
         break;
     }
 
-    paramsObject[key] = value;
+    searchCriteria[key] = value;
   });
+
+  useEffect(() => {
+    window.scrollTo({ top: 800, behavior: "smooth" });
+  }, [recipes]);
 
   return (
     <section>
       <h3 className="search-results-query">
         Search criteria:{" "}
         <span>
-          {Object.entries(paramsObject).map(([key, value]) => (
+          {Object.entries(searchCriteria).map(([key, value]) => (
             <p key={key}>
               {key}: {value}
             </p>

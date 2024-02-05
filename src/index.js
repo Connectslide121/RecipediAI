@@ -55,13 +55,15 @@ const router = createBrowserRouter([
             path: "daietpedia/search",
             element: <Searh />,
             errorElement: <ErrorPage />,
-            action: searchAction
-          },
-          {
-            path: "daietpedia/search/result/:query",
-            element: <SearchResult />,
-            loader: searchResultLoader,
-            errorElement: <ErrorPage />
+            action: searchAction,
+            children: [
+              {
+                path: "result/:query",
+                element: <SearchResult />,
+                loader: searchResultLoader,
+                errorElement: <ErrorPage />
+              }
+            ]
           },
           {
             path: "daietpedia/assistant",
